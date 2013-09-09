@@ -1,0 +1,97 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: GBK
+
+@INPROCEEDINGS{garcia2012real,
+  author = {Enrique A. Garcia and Ram¨®n F. Brena},
+  title = {Real Time Activity Recognition Using a Cell Phone's Accelerometer
+	Wi-Fi.},
+  booktitle = {Intelligent Environments (Workshops)},
+  year = {2012},
+  pages = {94-103},
+  crossref = {2012},
+  ee = {http://dx.doi.org/10.3233/978-1-61499-080-2-94},
+  file = {:garcia2012real.pdf:PDF}
+}
+
+@INCOLLECTION{brezmes2009activity,
+  author = {Brezmes, Tomas and Gorricho, Juan-Luis and Cotrina, Josep},
+  title = {Activity recognition from accelerometer data on a mobile phone},
+  booktitle = {Distributed computing, artificial intelligence, bioinformatics, soft
+	computing, and ambient assisted living},
+  publisher = {Springer},
+  year = {2009},
+  pages = {796--799},
+  file = {:brezmes2009activity.pdf:PDF}
+}
+
+@INPROCEEDINGS{khan2010human,
+  author = {Khan, Adil Mehmood and Lee, Y-K and Lee, SY and Kim, T-S},
+  title = {Human activity recognition via an accelerometer-enabled-smartphone
+	using kernel discriminant analysis},
+  booktitle = {Future Information Technology (FutureTech), 2010 5th International
+	Conference on},
+  year = {2010},
+  pages = {1--6},
+  organization = {IEEE},
+  file = {:khan2010human.pdf:PDF}
+}
+
+@ARTICLE{kwapisz2011activity,
+  author = {Kwapisz, Jennifer R and Weiss, Gary M and Moore, Samuel A},
+  title = {Activity recognition using cell phone accelerometers},
+  journal = {ACM SIGKDD Explorations Newsletter},
+  year = {2011},
+  volume = {12},
+  pages = {74--82},
+  number = {2},
+  file = {:kwapisz2011activity.pdf:PDF},
+  publisher = {ACM}
+}
+
+@ARTICLE{lane2010survey,
+  author = {Lane, Nicholas D and Miluzzo, Emiliano and Lu, Hong and Peebles,
+	Daniel and Choudhury, Tanzeem and Campbell, Andrew T},
+  title = {A survey of mobile phone sensing},
+  journal = {Communications Magazine, IEEE},
+  year = {2010},
+  volume = {48},
+  pages = {140--150},
+  number = {9},
+  file = {:lane2010survey.pdf:PDF},
+  publisher = {IEEE}
+}
+
+@INPROCEEDINGS{sankar2012capturing,
+  author = {Sankar, Aditya and Seitz, Steven},
+  title = {Capturing indoor scenes with smartphones},
+  booktitle = {Proceedings of the 25th annual ACM symposium on User interface software
+	and technology},
+  year = {2012},
+  pages = {403--412},
+  organization = {ACM},
+  file = {:sankar2012capturing.pdf:PDF}
+}
+
+@INCOLLECTION{sun2010activity,
+  author = {Sun, Lin and Zhang, Daqing and Li, Bin and Guo, Bin and Li, Shijian},
+  title = {Activity recognition on an accelerometer embedded mobile phone with
+	varying positions and orientations},
+  booktitle = {Ubiquitous intelligence and computing},
+  publisher = {Springer},
+  year = {2010},
+  pages = {548--562},
+  file = {:sun2010activity.pdf:PDF}
+}
+
+@INPROCEEDINGS{yang2009toward,
+  author = {Yang, Jun},
+  title = {Toward physical activity diary: motion recognition using simple acceleration
+	features with mobile phones},
+  booktitle = {Proceedings of the 1st international workshop on Interactive multimedia
+	for consumer electronics},
+  year = {2009},
+  pages = {1--10},
+  organization = {ACM},
+  file = {:yang2009toward.pdf:PDF}
+}
+
