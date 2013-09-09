@@ -1,0 +1,2 @@
+
+在这篇文章里面“Real Time Activity Recognition Using a Cell Phone’s Accelerometer and Wi-Fi”，又看到了一句话“A delay of 500msis set between the scans.”。
