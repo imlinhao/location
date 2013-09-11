@@ -17,14 +17,17 @@
 	
 	This paper uses recognized Simple Activities(running, walking, resting,
 	sitting, etc. ) and the WiFi location information to do Complex Activities
-	Recognition.
+	Recognition. An example is "if walkingis detected as a simple activity
+	and the Wi-Fi yields information that tells us that the user is in
+	a library, then we can classify the whole activity as looking for
+	a book"
 	
 	
 	The idea is OK. But little algorithm, and for the Android WiFi scan
 	problem the paper has a setence "A 
 	
-	delay of 500ms is set between the scans."  This  can be an example
-	to my motivation to measure WiFi scan speed, and point out the wrong
+	delay of 500ms is set between the scans." This can be an example to
+	my motivation to measure WiFi scan speed, and point out the wrong
 	multithread WiFi Scanning program.
 	
 	
@@ -61,7 +64,7 @@
   review = {This paper is also consider the varing phone position carried with
 	people. Like this paper "Activity Recognition on an Accelerometer
 	Embedded Mobile Phone with Varying Positions and Orientations". This
-	paper mainly uses KDA(Kernel Discriminant Analysis)  and ANN(Artificial
+	paper mainly uses KDA(Kernel Discriminant Analysis) and ANN(Artificial
 	Neural Nets), and the other paper mainly uses SVM.}
 }
 
@@ -111,6 +114,16 @@
 	sensing algorithms, applications, and systems." is attractive.}
 }
 
+@INPROCEEDINGS{plotz2011feature,
+  author = {Pl{\"o}tz, Thomas and Hammerla, Nils Y and Olivier, Patrick},
+  title = {Feature learning for activity recognition in ubiquitous computing},
+  booktitle = {Proceedings of the Twenty-Second international joint conference on
+	Artificial Intelligence-Volume Volume Two},
+  year = {2011},
+  pages = {1729--1734},
+  organization = {AAAI Press}
+}
+
 @INPROCEEDINGS{sankar2012capturing,
   author = {Sankar, Aditya and Seitz, Steven},
   title = {Capturing indoor scenes with smartphones},
@@ -120,7 +133,7 @@
   pages = {403--412},
   organization = {ACM},
   file = {:sankar2012capturing.pdf:PDF},
-  review = {The topic  indoor floor plan reconstruction using smartphones is attractive.}
+  review = {The topic indoor floor plan reconstruction using smartphones is attractive.}
 }
 
 @INCOLLECTION{sun2010activity,
@@ -135,6 +148,40 @@
   review = {In the abstract," this paper intends to recognize the physical activities
 	in the natural setting where the mobile phone¡¯s position and orientation
 	are varying" is attractive.}
+}
+
+@INPROCEEDINGS{trung2012inertial,
+  author = {Trung, Ngo Thanh and Makihara, Yasushi and Nagahara, Hajime and Mukaigawa,
+	Yasuhiro and Yagi, Yasushi},
+  title = {Inertial-sensor-based walking action recognition using robust step
+	detection and inter-class relationships},
+  booktitle = {Pattern Recognition (ICPR), 2012 21st International Conference on},
+  year = {2012},
+  pages = {3811--3814},
+  organization = {IEEE}
+}
+
+@INPROCEEDINGS{xu2012co,
+  author = {Xu, Wenyao and Zhang, Mi and Sawchuk, Alexander A and Sarrafzadeh,
+	Majid},
+  title = {Co-recognition of human activity and sensor location via compressed
+	sensing in wearable body sensor networks},
+  booktitle = {Wearable and Implantable Body Sensor Networks (BSN), 2012 Ninth International
+	Conference on},
+  year = {2012},
+  pages = {124--129},
+  organization = {IEEE},
+  file = {:xu2012co.pdf:PDF},
+  review = {Actually There is no magic, we still need to know the position class
+	set, then using classifier to classify the data.
+	
+	
+	The different of this paper to others is that other papers " treat
+	sensor localization and activity recognition as two separate problems."
+	But this paper solve this paper as one single problem.
+	
+	
+	the location classification result is good as metioned in Table IV.}
 }
 
 @INPROCEEDINGS{yang2009toward,
@@ -159,6 +206,44 @@
   pages = {631--640},
   organization = {ACM},
   file = {:zhang2012motion.pdf:PDF},
-  review = {Bag-of-Features approach looks nice.}
+  review = {Bag-of-Features approach looks nice.
+	
+	
+	The thinking of this paper is similar to mine. View the motion activity
+	recognition like a natrural language process or speech recognition
+	problem. The using the method in the other fields to do motion activity
+	recogniton.
+	
+	
+	In the end of the paper, it is said that it will using HMM/CRF on
+	top of BoF.
+	
+	
+	After looking at the papers referenced this paper on google scholar,
+	there still no paper using HMM/CRF on top of BoF.}
+}
+
+@INPROCEEDINGS{zhang2012usc,
+  author = {Zhang, Mi and Sawchuk, Alexander A},
+  title = {USC-HAD: a daily activity dataset for ubiquitous activity recognition
+	using wearable sensors.},
+  booktitle = {UbiComp},
+  year = {2012},
+  pages = {1036--1043},
+  file = {:zhang2012usc.pdf:PDF},
+  review = {A paper about dataset used for activity recognition.
+	
+	
+	Some useful dataset mentioned in this paper is listed below:
+	
+	0.USC-HAD Dataset : http://sipi.usc.edu/HAD/
+	
+	1.MIT PlaceLab Dataset : http://architecture.mit.edu/house_n/data/PlaceLab/PlaceLab.htm
+	
+	2.UC Berkeley WARD Dataset : http://www.eecs.berkeley.edu/~yang/software/WAR/
+	
+	3.CMU Multi-Modal Activity Database (CMU-MMAC) : http://kitchen.cs.cmu.edu/
+	
+	4.OPPORTUNITY Dataset : http://archive.ics.uci.edu/ml/datasets/OPPORTUNITY+Activity+Recognition}
 }
 
