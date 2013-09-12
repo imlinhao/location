@@ -1,2 +1,3 @@
-
 在这篇文章里面“Real Time Activity Recognition Using a Cell Phone’s Accelerometer and Wi-Fi”，又看到了一句话“A delay of 500msis set between the scans.”。
+
+稍微觉得可能可以做一篇文章，名字叫做“Simultanous Localization and Activity Recognition Using Smartphones”，也就是说把活动识别和定位同时给做了，并且相互提高准确度。
