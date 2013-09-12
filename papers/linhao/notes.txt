@@ -1,3 +1,5 @@
 在这篇文章里面“Real Time Activity Recognition Using a Cell Phone’s Accelerometer and Wi-Fi”，又看到了一句话“A delay of 500msis set between the scans.”。
 
 稍微觉得可能可以做一篇文章，名字叫做“Simultanous Localization and Activity Recognition Using Smartphones”，也就是说把活动识别和定位同时给做了，并且相互提高准确度。
+
+2013-9-12：今晚突然想到用 weka activity recognition ，来Google一下，结果挺好的，明天过来第一件事就是好好看一下搜到的结果， weka svm crf貌似也可以搜一下
