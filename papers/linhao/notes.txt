@@ -3,3 +3,9 @@
 稍微觉得可能可以做一篇文章，名字叫做“Simultanous Localization and Activity Recognition Using Smartphones”，也就是说把活动识别和定位同时给做了，并且相互提高准确度。
 
 2013-9-12：今晚突然想到用 weka activity recognition ，来Google一下，结果挺好的，明天过来第一件事就是好好看一下搜到的结果， weka svm crf貌似也可以搜一下
+
+发现这个android课程真心好呀！http://www.cs.dartmouth.edu/~campbell/cs65/cs65.html，里面也介绍了用weka来做活动识别
+
+Boosting is available in the Weka toolkit.这句话是在这篇文章Activity Recognition from Accelerometer Data里面提到了，觉得挺赞。
+
+看了mit和stanford合作的一个活动识别项目，wockets(https://code.google.com/p/wockets/)，觉得还是不错的，唯有一点就是项目貌似有点过时了。不过这个网页还是要mark一下的，http://web.mit.edu/wockets/ProjectsSoftware.htm。他们想要做的几个idea。

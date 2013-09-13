@@ -34,6 +34,31 @@
 	The related work is also OK.}
 }
 
+@INPROCEEDINGS{anguita2012human,
+  author = {Anguita, Davide and Ghio, Alessandro and Oneto, Luca and Parra, Xavier
+	and Reyes-Ortiz, Jorge L},
+  title = {Human activity recognition on smartphones using a multiclass hardware-friendly
+	support vector machine},
+  booktitle = {Proceedings of the 4th international conference on Ambient Assisted
+	Living and Home Care},
+  year = {2012},
+  pages = {216--223},
+  organization = {Springer-Verlag},
+  owner = {lin hao},
+  timestamp = {2013.09.13}
+}
+
+@INCOLLECTION{bao2004activity,
+  author = {Bao, Ling and Intille, Stephen S},
+  title = {Activity recognition from user-annotated acceleration data},
+  booktitle = {Pervasive Computing},
+  publisher = {Springer},
+  year = {2004},
+  pages = {1--17},
+  owner = {hao},
+  timestamp = {2013.09.13}
+}
+
 @INCOLLECTION{brezmes2009activity,
   author = {Brezmes, Tomas and Gorricho, Juan-Luis and Cotrina, Josep},
   title = {Activity recognition from accelerometer data on a mobile phone},
@@ -88,6 +113,20 @@
 	From the Fig. 4, the segmentation of activities is very accrancy.}
 }
 
+@ARTICLE{gyHorbiro2009activity,
+  author = {Gy{\H{o}}rb{\'\i}r{\'o}, Norbert and F{\'a}bi{\'a}n, {\'A}kos and
+	Hom{\'a}nyi, Gergely},
+  title = {An activity recognition system for mobile phones},
+  journal = {Mobile Networks and Applications},
+  year = {2009},
+  volume = {14},
+  pages = {82--91},
+  number = {1},
+  owner = {lin hao},
+  publisher = {Springer},
+  timestamp = {2013.09.13}
+}
+
 @INPROCEEDINGS{khan2010human,
   author = {Khan, Adil Mehmood and Lee, Y-K and Lee, SY and Kim, T-S},
   title = {Human activity recognition via an accelerometer-enabled-smartphone
@@ -103,6 +142,15 @@
 	Embedded Mobile Phone with Varying Positions and Orientations". This
 	paper mainly uses KDA(Kernel Discriminant Analysis) and ANN(Artificial
 	Neural Nets), and the other paper mainly uses SVM.}
+}
+
+@INPROCEEDINGS{kose2012online,
+  author = {Kose, Mustafa and Incel, Ozlem Durmaz and Ersoy, Cem},
+  title = {Online human activity recognition on smart phones},
+  booktitle = {Workshop on mobile sensing: from smartphones and wearables to big
+	data (colocated with IPSN)},
+  year = {2012},
+  pages = {11--15}
 }
 
 @ARTICLE{kwapisz2011activity,
@@ -180,6 +228,43 @@
   pages = {487--506}
 }
 
+@ARTICLE{luvstrek2009fall,
+  author = {Lu{\v{s}}trek, Mitja and Kalu{\v{z}}a, Bo{\v{s}}tjan},
+  title = {Fall detection and activity recognition with machine learning},
+  journal = {Informatica},
+  year = {2009},
+  volume = {33},
+  pages = {197--204},
+  number = {2},
+  owner = {lin hao},
+  timestamp = {2013.09.13}
+}
+
+@INPROCEEDINGS{maguire2009comparison,
+  author = {Maguire, Dominic and Frisby, Richard},
+  title = {Comparison of feature classification algorithm for activity recognition
+	based on accelerometer and heart rate data},
+  booktitle = {9th. IT \& T Conference},
+  year = {2009},
+  pages = {11},
+  owner = {lin hao},
+  timestamp = {2013.09.13}
+}
+
+@INPROCEEDINGS{maurer2006activity,
+  author = {Maurer, Uwe and Smailagic, Asim and Siewiorek, Daniel P and Deisher,
+	Michael},
+  title = {Activity recognition and monitoring using multiple sensors on different
+	body positions},
+  booktitle = {Wearable and Implantable Body Sensor Networks, 2006. BSN 2006. International
+	Workshop on},
+  year = {2006},
+  pages = {4--pp},
+  organization = {IEEE},
+  owner = {lin hao},
+  timestamp = {2013.09.13}
+}
+
 @INPROCEEDINGS{plotz2011feature,
   author = {Pl{\"o}tz, Thomas and Hammerla, Nils Y and Olivier, Patrick},
   title = {Feature learning for activity recognition in ubiquitous computing},
@@ -188,6 +273,17 @@
   year = {2011},
   pages = {1729--1734},
   organization = {AAAI Press}
+}
+
+@INPROCEEDINGS{ravi2005activity,
+  author = {Ravi, Nishkam and Dandekar, Nikhil and Mysore, Preetham and Littman,
+	Michael L},
+  title = {Activity recognition from accelerometer data},
+  booktitle = {AAAI},
+  year = {2005},
+  pages = {1541--1546},
+  owner = {lin hao},
+  timestamp = {2013.09.13}
 }
 
 @ARTICLE{rokicki2013diameter,
