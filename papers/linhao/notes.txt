@@ -9,3 +9,6 @@
 Boosting is available in the Weka toolkit.这句话是在这篇文章Activity Recognition from Accelerometer Data里面提到了，觉得挺赞。
 
 看了mit和stanford合作的一个活动识别项目，wockets(https://code.google.com/p/wockets/)，觉得还是不错的，唯有一点就是项目貌似有点过时了。不过这个网页还是要mark一下的，http://web.mit.edu/wockets/ProjectsSoftware.htm。他们想要做的几个idea。
+
+www.cs.dartmouth.edu/~campbell/cs65/lab5/lab5.html
+www.cs.dartmouth.edu/~campbell/cs65/lecture22/lecture22.html
