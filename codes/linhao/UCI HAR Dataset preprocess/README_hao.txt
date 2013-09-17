@@ -1,0 +1,1 @@
+preprocess.py:将UCI HAR Dataset(http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) 转换为weka可用的arff文件。
