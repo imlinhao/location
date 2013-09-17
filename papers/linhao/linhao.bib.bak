@@ -44,7 +44,18 @@
   year = {2012},
   pages = {216--223},
   organization = {Springer-Verlag},
+  file = {:anguita2012human.pdf:PDF},
   owner = {lin hao},
+  review = {This paper exploit the fixed-point arithmetic of SVM to do energy
+	aware mobile phone activity recognition.
+	
+	
+	I didn't look in detail about the method to do fixed-point , I just
+	see he change the sigmoid function to LUT(Look-Up-Table).
+	
+	
+	There also something interesting is that this paper use 17 features
+	in a window, but at the UCI-HAR-Dataset there exists 561 features.},
   timestamp = {2013.09.13}
 }
 
@@ -91,6 +102,19 @@
   pages = {1345--1350}
 }
 
+@INPROCEEDINGS{dernbach2012simple,
+  author = {Dernbach, Stefan and Das, Barnan and Krishnan, Narayanan C and Thomas,
+	Brian L and Cook, Diane J},
+  title = {Simple and complex activity recognition through smart phones},
+  booktitle = {Intelligent Environments (IE), 2012 8th International Conference
+	on},
+  year = {2012},
+  pages = {214--221},
+  organization = {IEEE},
+  owner = {lin hao},
+  timestamp = {2013.09.17}
+}
+
 @ARTICLE{duong2009efficient,
   author = {Duong, Thi and Phung, Dinh and Bui, Hung and Venkatesh, Svetha},
   title = {Efficient duration and hierarchical modeling for human activity recognition},
@@ -128,15 +152,31 @@
   volume = {14},
   pages = {82--91},
   number = {1},
+  file = {:gyHorbiro2009activity.pdf:PDF},
   owner = {lin hao},
   publisher = {Springer},
   review = {Using "decision table, instance-based learning, C4.5 decision tree,
 	and naive Bayes classifiers" to recognize 6 activities.
 	
 	
-	Using one smartphone (Nokia 6630) and  measure the power consumption
+	Using one smartphone (Nokia 6630) and measure the power consumption
 	of it.},
   timestamp = {2013.09.13}
+}
+
+@ARTICLE{han2010implementation,
+  author = {Han, Chang Woo and Kang, Shin Jae and Kim, Nam Soo},
+  title = {Implementation of hmm-based human activity recognition using single
+	triaxial accelerometer},
+  journal = {IEICE transactions on fundamentals of electronics, communications
+	and computer sciences},
+  year = {2010},
+  volume = {93},
+  pages = {1379--1383},
+  number = {7},
+  owner = {lin hao},
+  publisher = {The Institute of Electronics, Information and Communication Engineers},
+  timestamp = {2013.09.17}
 }
 
 @INPROCEEDINGS{khan2010human,
@@ -163,6 +203,19 @@
 	data (colocated with IPSN)},
   year = {2012},
   pages = {11--15}
+}
+
+@INPROCEEDINGS{krishnan2008analysis,
+  author = {Krishnan, Narayanan Chatapuram and Panchanathan, Sethuraman},
+  title = {Analysis of low resolution accelerometer data for continuous human
+	activity recognition},
+  booktitle = {Acoustics, Speech and Signal Processing, 2008. ICASSP 2008. IEEE
+	International Conference on},
+  year = {2008},
+  pages = {3337--3340},
+  organization = {IEEE},
+  owner = {lin hao},
+  timestamp = {2013.09.17}
 }
 
 @ARTICLE{kwapisz2011activity,
@@ -240,6 +293,18 @@
   pages = {487--506}
 }
 
+@INPROCEEDINGS{long2009single,
+  author = {Long, Xi and Yin, Bin and Aarts, Ronald M},
+  title = {Single-accelerometer-based daily physical activity classification},
+  booktitle = {Engineering in Medicine and Biology Society, 2009. EMBC 2009. Annual
+	International Conference of the IEEE},
+  year = {2009},
+  pages = {6107--6110},
+  organization = {IEEE},
+  owner = {lin hao},
+  timestamp = {2013.09.17}
+}
+
 @ARTICLE{luvstrek2009fall,
   author = {Lu{\v{s}}trek, Mitja and Kalu{\v{z}}a, Bo{\v{s}}tjan},
   title = {Fall detection and activity recognition with machine learning},
@@ -252,7 +317,7 @@
   owner = {lin hao},
   review = {This paper uses 8 Machine Learning Algorithms to do training "C4.5
 	decision trees, RIPPER decision rules, Naive Bayes, 3-Nearest Neighbors,
-	Support Vector Machine  (SVM), Random Forest, Bagging and Adaboost
+	Support Vector Machine (SVM), Random Forest, Bagging and Adaboost
 	M1 boosting."},
   timestamp = {2013.09.13}
 }
@@ -300,7 +365,11 @@
 	toolkit was used to find feature sets.
 	
 	
-	Just like "mean,rms,std,var,mad,hist,prc,iqr,zcr,mcr..."},
+	Just like "mean,rms,std,var,mad,hist,prc,iqr,zcr,mcr..."
+	
+	
+	They also "placed our sensor hardware on the left wrist, belt, necklace,
+	in the right trouser pocket, shirt pocket, and bag."},
   timestamp = {2013.09.13}
 }
 
@@ -314,6 +383,21 @@
   organization = {AAAI Press}
 }
 
+@ARTICLE{pober2006development,
+  author = {Pober, David M and Staudenmayer, John and Raphael, Christopher and
+	Freedson, Patty S},
+  title = {Development of novel techniques to classify physical activity mode
+	using accelerometers},
+  journal = {Medicine and science in sports and exercise},
+  year = {2006},
+  volume = {38},
+  pages = {1626},
+  number = {9},
+  owner = {lin hao},
+  publisher = {WILLIAMS \& WILKINS},
+  timestamp = {2013.09.17}
+}
+
 @INPROCEEDINGS{ravi2005activity,
   author = {Ravi, Nishkam and Dandekar, Nikhil and Mysore, Preetham and Littman,
 	Michael L},
@@ -324,9 +408,9 @@
   file = {:ravi2005activity.pdf:PDF},
   owner = {lin hao},
   review = {This paper using base-level "Decision Tables, Decision Trees (C4.5),
-	K-nearest neighbors, SVM, Naive Bayes" in WEKA  and also "a near
-	exhaustive set of classifiers: Boosting, Bagging, Plurality Voting,
-	Stacking with Ordinary-Decision trees (ODTs) and Stacking with Meta-Decision
+	K-nearest neighbors, SVM, Naive Bayes" in WEKA and also "a near exhaustive
+	set of classifiers: Boosting, Bagging, Plurality Voting, Stacking
+	with Ordinary-Decision trees (ODTs) and Stacking with Meta-Decision
 	trees (MDTs)." to recognize eight activities.},
   timestamp = {2013.09.13}
 }
@@ -423,6 +507,21 @@
 	Training sample will have a Training vector.}
 }
 
+@ARTICLE{ward2006activity,
+  author = {Ward, Jamie A and Lukowicz, Paul and Troster, Gerhard and Starner,
+	Thad E},
+  title = {Activity recognition of assembly tasks using body-worn microphones
+	and accelerometers},
+  journal = {Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  year = {2006},
+  volume = {28},
+  pages = {1553--1567},
+  number = {10},
+  owner = {lin hao},
+  publisher = {IEEE},
+  timestamp = {2013.09.17}
+}
+
 @INPROCEEDINGS{xu2012co,
   author = {Xu, Wenyao and Zhang, Mi and Sawchuk, Alexander A and Sarrafzadeh,
 	Majid},
@@ -446,6 +545,20 @@
 	the location classification result is good as metioned in Table IV.}
 }
 
+@INPROCEEDINGS{yang2012online,
+  author = {Yang, Bo and Nevatia, Ram},
+  title = {An online learned CRF model for multi-target tracking},
+  booktitle = {Computer Vision and Pattern Recognition (CVPR), 2012 IEEE Conference
+	on},
+  year = {2012},
+  pages = {2034--2041},
+  organization = {IEEE},
+  owner = {lin hao},
+  review = {This paper looks difficult, I haven't read it in detail, just take
+	a look.},
+  timestamp = {2013.09.16}
+}
+
 @INPROCEEDINGS{yang2009toward,
   author = {Yang, Jun},
   title = {Toward physical activity diary: motion recognition using simple acceleration
@@ -455,7 +568,8 @@
   year = {2009},
   pages = {1--10},
   organization = {ACM},
-  file = {:yang2009toward.pdf:PDF}
+  file = {:yang2009toward.pdf:PDF},
+  review = {Using HMM to smooth the activity}
 }
 
 @INPROCEEDINGS{zhang2012motion,
