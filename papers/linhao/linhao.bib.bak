@@ -176,6 +176,8 @@
   number = {7},
   owner = {lin hao},
   publisher = {The Institute of Electronics, Information and Communication Engineers},
+  review = {There are two major differences between human activity recognition
+	and conventional speech or gesture recognition.},
   timestamp = {2013.09.17}
 }
 

@@ -69,3 +69,5 @@ www.cs.dartmouth.edu/~campbell/cs65/lecture22/lecture22.html
 10. Continous
 [1]Activity Recognition of Assembly Tasks Using Body-Worn Microphones and Accelerometers
 [2]ANALYSIS OF LOW RESOLUTION ACCELEROMETER DATA FOR CONTINUOUS HUMAN ACTIVTY RECOGNITION
+
+
