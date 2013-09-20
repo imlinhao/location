@@ -1,2 +1,73 @@
-
 在这篇文章里面“Real Time Activity Recognition Using a Cell Phone’s Accelerometer and Wi-Fi”，又看到了一句话“A delay of 500msis set between the scans.”。
+
+稍微觉得可能可以做一篇文章，名字叫做“Simultanous Localization and Activity Recognition Using Smartphones”，也就是说把活动识别和定位同时给做了，并且相互提高准确度。
+
+2013-9-12：今晚突然想到用 weka activity recognition ，来Google一下，结果挺好的，明天过来第一件事就是好好看一下搜到的结果， weka svm crf貌似也可以搜一下
+
+发现这个android课程真心好呀！http://www.cs.dartmouth.edu/~campbell/cs65/cs65.html，里面也介绍了用weka来做活动识别
+
+Boosting is available in the Weka toolkit.这句话是在这篇文章Activity Recognition from Accelerometer Data里面提到了，觉得挺赞。
+
+看了mit和stanford合作的一个活动识别项目，wockets(https://code.google.com/p/wockets/)，觉得还是不错的，唯有一点就是项目貌似有点过时了。不过这个网页还是要mark一下的，http://web.mit.edu/wockets/ProjectsSoftware.htm。他们想要做的几个idea。
+
+www.cs.dartmouth.edu/~campbell/cs65/lab5/lab5.html
+www.cs.dartmouth.edu/~campbell/cs65/lecture22/lecture22.html
+
+
+活动识别研究问题的一个分类：
+0.survey
+[1]A survey of mobile phone sensing Communications Magazine, IEEE, IEEE, 2010, 48, 140-150
+
+
+1. energy consumption
+[1]Human activity recognition on smartphones using a multiclass hardware-friendly support vector machine Proceedings of the 4th international conference on Ambient Assisted Living and Home Care, 2012, 216-223
+[2] An activity recognition system for mobile phones Mobile Networks and Applications, Springer, 2009, 14, 82-91 
+
+2. mobile phone carry position
+[1]Human activity recognition via an accelerometer-enabled-smartphone using kernel discriminant analysis Future Information Technology (FutureTech), 2010 5th International Conference on, 2010, 1-6
+[2]Activity recognition on an accelerometer embedded mobile phone with varying positions and orientations Ubiquitous intelligence and computing, Springer, 2010, 548-562
+[3]Toward physical activity diary: motion recognition using simple acceleration features with mobile phones Proceedings of the 1st international workshop on Interactive multimedia for consumer electronics, 2009, 1-10
+[4]Co-recognition of human activity and sensor location via compressed sensing in wearable body sensor networks Wearable and Implantable Body Sensor Networks (BSN), 2012 Ninth International Conference on, 2012, 124-129
+
+
+3. recognition algorithm
+[1]Activity recognition from user-annotated acceleration data Pervasive Computing, Springer, 2004, 1-17
+[2]Activity recognition using cell phone accelerometers ACM SIGKDD Explorations Newsletter, ACM, 2011, 12, 74-82
+[3]Fall detection and activity recognition with machine learning Informatica, 2009, 33, 197-204
+[4]Comparison of feature classification algorithm for activity recognition based on accelerometer and heart rate data 9th. IT & T Conference, 2009, 11
+[5]Activity recognition from accelerometer data AAAI, 2005, 1541-1546
+[6]Activity recognition and monitoring using multiple sensors on different body positions Wearable and Implantable Body Sensor Networks, 2006. BSN 2006. International Workshop on, 2006, 4-pp
+
+4. activity model
+[1]Activity recognition and abnormality detection with the switching hidden semi-markov model Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer Society Conference on, 2005, 1, 838-845
+[2]Efficient duration and hierarchical modeling for human activity recognition Artificial Intelligence, Elsevier, 2009, 173, 830-856
+[3]Gestures are strings: efficient online gesture spotting and classification using string matching Proceedings of the ICST 2nd international conference on Body area networks, 2007, 16
+[4]Motion primitive-based human activity recognition using a bag-of-features approach Proceedings of the 2nd ACM SIGHIT International Health Informatics Symposium, 2012, 631-640
+[5]Inertial-sensor-based walking action recognition using robust step detection and inter-class relationships Pattern Recognition (ICPR), 2012 21st International Conference on, 2012, 3811-3814
+
+5. software implementation
+[1]Activity recognition from accelerometer data on a mobile phone Distributed computing, artificial intelligence, bioinformatics, soft computing, and ambient assisted living, Springer, 2009, 796-799 
+[2]Online human activity recognition on smart phones Workshop on mobile sensing: from smartphones and wearables to big data (colocated with IPSN), 2012, 11-15
+
+6. HMM & CRF 
+[1]An online learned CRF model for multi-target tracking Computer Vision and Pattern Recognition (CVPR), 2012 IEEE Conference on, 2012, 2034-2041
+[2]Development of Novel Techniques to Classify Physical Activity Mode Using Accelerometers
+[3]Implementation of hmm-based human activity recognition using single triaxial accelerometer IEICE transactions on fundamentals of electronics, communications and computer sciences, The Institute of Electronics, Information and Communication Engineers, 2010, 93, 1379-1383
+
+7. complex activity
+[1] Real Time Activity Recognition Using a Cell Phone's Accelerometer Wi-Fi. Intelligent Environments (Workshops), 2012, 94-103
+[2] Hierarchical conditional random fields for GPS-based activity recognition Robotics Research, Springer, 2007, 487-506
+
+8. Feature Selection
+[1]A Hybrid Discriminative/Generative Approach for Modeling Human Activities. IJCAI, 2005, 5, 766-772
+[2]Feature learning for activity recognition in ubiquitous computing Proceedings of the Twenty-Second international joint conference on Artificial Intelligence-Volume Volume Two, 2011, 1729-1734
+
+
+9. Dataset
+[1]USC-HAD: a daily activity dataset for ubiquitous activity recognition using wearable sensors. UbiComp, 2012, 1036-1043
+
+10. Continous
+[1]Activity Recognition of Assembly Tasks Using Body-Worn Microphones and Accelerometers
+[2]ANALYSIS OF LOW RESOLUTION ACCELEROMETER DATA FOR CONTINUOUS HUMAN ACTIVTY RECOGNITION
+
+

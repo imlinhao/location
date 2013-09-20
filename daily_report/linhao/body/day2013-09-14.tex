@@ -1,0 +1,31 @@
+\chapter{2013年9月14日}
+\section{昨日总结}
+昨天受的最大刺激，就是看了Dartmouth College Andrew T. Campbell教授的CS65课程。尤其是 "\url{http://www.cs.dartmouth.edu/~campbell/cs65/lecture22/lecture22.html}"和"\url{http://www.cs.dartmouth.edu/~campbell/cs65/lab5/lab5.html}"这两节课程。
+
+这两节课程一下子就让我明白了，如何去加速度的数据中提取特征值，如何用WEKA去做分类，并且把分类算法嵌入到Android中去。课程直接提供了相应的Android代码，在手机上安装测试之后，发现效果还是非常不错的。这是多年来，我第一次对Android程序起了兴趣。
+
+\section{今日安排}
+今天的任务主要在于特征提取的算法。
+
+看论文是必须的，但是我在想如何看完之后，自己实现一把。这有两个方面的问题：1.如何计算得到文章中的特征值，然后把特征值存成WEKA能识别的文件；2.采用什么样的数据集来做实验。姑且带着这两个问题来看文章吧。看上几篇之后，再说。
+
+\section{批量转码}
+\begin{lstlisting}
+for /r  dir_name  %i in (*.txt) do iconv.exe -f GBK -t UTF-8 %i > %~ni_utf8.txt
+\end{lstlisting}
+
+\section{WEKA基础教程}
+网上稍微搜了一下WEKA教程，看到有IBM的教程，果断摘录，看看。
+\begin{enumerate}
+  \item \url{http://www.ibm.com/developerworks/cn/opensource/os-weka1/}
+  \item \url{http://www.ibm.com/developerworks/cn/opensource/os-weka2/}
+  \item \url{http://www.ibm.com/developerworks/cn/opensource/os-weka3/}
+\end{enumerate}
+
+其相对应的英文版教程是：
+\begin{enumerate}
+  \item https://www.ibm.com/developerworks/opensource/library/os-weka1/
+  \item https://www.ibm.com/developerworks/opensource/library/os-weka2/
+  \item https://www.ibm.com/developerworks/opensource/library/os-weka3/
+\end{enumerate}
+

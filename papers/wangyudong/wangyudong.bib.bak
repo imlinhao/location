@@ -1,0 +1,24 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: GBK
+
+@INCOLLECTION{brezmes2009activity,
+  author = {Brezmes, Tomas and Gorricho, Juan-Luis and Cotrina, Josep},
+  title = {Activity recognition from accelerometer data on a mobile phone},
+  booktitle = {Distributed computing, artificial intelligence, bioinformatics, soft
+	computing, and ambient assisted living},
+  publisher = {Springer},
+  year = {2009},
+  pages = {796--799}
+}
+
+@INPROCEEDINGS{rai2012zee,
+  author = {Rai, Anshul and Chintalapudi, Krishna Kant and Padmanabhan, Venkata
+	N and Sen, Rijurekha},
+  title = {Zee: Zero-effort crowdsourcing for indoor localization},
+  booktitle = {Proceedings of the 18th annual international conference on Mobile
+	computing and networking},
+  year = {2012},
+  pages = {293--304},
+  organization = {ACM}
+}
+

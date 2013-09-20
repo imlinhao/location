@@ -34,6 +34,48 @@
 	The related work is also OK.}
 }
 
+@INPROCEEDINGS{anguita2012human,
+  author = {Anguita, Davide and Ghio, Alessandro and Oneto, Luca and Parra, Xavier
+	and Reyes-Ortiz, Jorge L},
+  title = {Human activity recognition on smartphones using a multiclass hardware-friendly
+	support vector machine},
+  booktitle = {Proceedings of the 4th international conference on Ambient Assisted
+	Living and Home Care},
+  year = {2012},
+  pages = {216--223},
+  organization = {Springer-Verlag},
+  file = {:anguita2012human.pdf:PDF},
+  owner = {lin hao},
+  review = {This paper exploit the fixed-point arithmetic of SVM to do energy
+	aware mobile phone activity recognition.
+	
+	
+	I didn't look in detail about the method to do fixed-point , I just
+	see he change the sigmoid function to LUT(Look-Up-Table).
+	
+	
+	There also something interesting is that this paper use 17 features
+	in a window, but at the UCI-HAR-Dataset there exists 561 features.},
+  timestamp = {2013.09.13}
+}
+
+@INCOLLECTION{bao2004activity,
+  author = {Bao, Ling and Intille, Stephen S},
+  title = {Activity recognition from user-annotated acceleration data},
+  booktitle = {Pervasive Computing},
+  publisher = {Springer},
+  year = {2004},
+  pages = {1--17},
+  file = {:bao2004activity.pdf:PDF},
+  owner = {hao},
+  review = {Different sensor placed at different position.
+	
+	
+	Using "Decision Table ,IBL, C4.5, Naive Bayes", and recognizing 20
+	activities.},
+  timestamp = {2013.09.13}
+}
+
 @INCOLLECTION{brezmes2009activity,
   author = {Brezmes, Tomas and Gorricho, Juan-Luis and Cotrina, Josep},
   title = {Activity recognition from accelerometer data on a mobile phone},
@@ -51,6 +93,94 @@
 	Not opensource, and don't know where we can download the software.}
 }
 
+@INPROCEEDINGS{bui2008hidden,
+  author = {Bui, Hung Hai and Phung, Dinh Q and Venkatesh, Svetha and Phan, Hai},
+  title = {The Hidden Permutation Model and Location-Based Activity Recognition.},
+  booktitle = {AAAI},
+  year = {2008},
+  volume = {8},
+  pages = {1345--1350}
+}
+
+@INPROCEEDINGS{dernbach2012simple,
+  author = {Dernbach, Stefan and Das, Barnan and Krishnan, Narayanan C and Thomas,
+	Brian L and Cook, Diane J},
+  title = {Simple and complex activity recognition through smart phones},
+  booktitle = {Intelligent Environments (IE), 2012 8th International Conference
+	on},
+  year = {2012},
+  pages = {214--221},
+  organization = {IEEE},
+  owner = {lin hao},
+  timestamp = {2013.09.17}
+}
+
+@ARTICLE{duong2009efficient,
+  author = {Duong, Thi and Phung, Dinh and Bui, Hung and Venkatesh, Svetha},
+  title = {Efficient duration and hierarchical modeling for human activity recognition},
+  journal = {Artificial Intelligence},
+  year = {2009},
+  volume = {173},
+  pages = {830--856},
+  number = {7},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{duong2005activity,
+  author = {Duong, Thi V and Bui, Hung Hai and Phung, Dinh Q and Venkatesh, Svetha},
+  title = {Activity recognition and abnormality detection with the switching
+	hidden semi-markov model},
+  booktitle = {Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer
+	Society Conference on},
+  year = {2005},
+  volume = {1},
+  pages = {838--845},
+  organization = {IEEE},
+  file = {:duong2005activity.pdf:PDF},
+  review = {The Duration model in this paper is attractive.
+	
+	
+	From the Fig. 4, the segmentation of activities is very accrancy.}
+}
+
+@ARTICLE{gyHorbiro2009activity,
+  author = {Gy{\H{o}}rb{\'\i}r{\'o}, Norbert and F{\'a}bi{\'a}n, {\'A}kos and
+	Hom{\'a}nyi, Gergely},
+  title = {An activity recognition system for mobile phones},
+  journal = {Mobile Networks and Applications},
+  year = {2009},
+  volume = {14},
+  pages = {82--91},
+  number = {1},
+  file = {:gyHorbiro2009activity.pdf:PDF},
+  owner = {lin hao},
+  publisher = {Springer},
+  review = {Using "decision table, instance-based learning, C4.5 decision tree,
+	and naive Bayes classifiers" to recognize 6 activities.
+	
+	
+	Using one smartphone (Nokia 6630) and measure the power consumption
+	of it.},
+  timestamp = {2013.09.13}
+}
+
+@ARTICLE{han2010implementation,
+  author = {Han, Chang Woo and Kang, Shin Jae and Kim, Nam Soo},
+  title = {Implementation of hmm-based human activity recognition using single
+	triaxial accelerometer},
+  journal = {IEICE transactions on fundamentals of electronics, communications
+	and computer sciences},
+  year = {2010},
+  volume = {93},
+  pages = {1379--1383},
+  number = {7},
+  owner = {lin hao},
+  publisher = {The Institute of Electronics, Information and Communication Engineers},
+  review = {There are two major differences between human activity recognition
+	and conventional speech or gesture recognition.},
+  timestamp = {2013.09.17}
+}
+
 @INPROCEEDINGS{khan2010human,
   author = {Khan, Adil Mehmood and Lee, Y-K and Lee, SY and Kim, T-S},
   title = {Human activity recognition via an accelerometer-enabled-smartphone
@@ -66,6 +196,28 @@
 	Embedded Mobile Phone with Varying Positions and Orientations". This
 	paper mainly uses KDA(Kernel Discriminant Analysis) and ANN(Artificial
 	Neural Nets), and the other paper mainly uses SVM.}
+}
+
+@INPROCEEDINGS{kose2012online,
+  author = {Kose, Mustafa and Incel, Ozlem Durmaz and Ersoy, Cem},
+  title = {Online human activity recognition on smart phones},
+  booktitle = {Workshop on mobile sensing: from smartphones and wearables to big
+	data (colocated with IPSN)},
+  year = {2012},
+  pages = {11--15}
+}
+
+@INPROCEEDINGS{krishnan2008analysis,
+  author = {Krishnan, Narayanan Chatapuram and Panchanathan, Sethuraman},
+  title = {Analysis of low resolution accelerometer data for continuous human
+	activity recognition},
+  booktitle = {Acoustics, Speech and Signal Processing, 2008. ICASSP 2008. IEEE
+	International Conference on},
+  year = {2008},
+  pages = {3337--3340},
+  organization = {IEEE},
+  owner = {lin hao},
+  timestamp = {2013.09.17}
 }
 
 @ARTICLE{kwapisz2011activity,
@@ -114,6 +266,115 @@
 	sensing algorithms, applications, and systems." is attractive.}
 }
 
+@INPROCEEDINGS{lester2005hybrid,
+  author = {Lester, Jonathan and Choudhury, Tanzeem and Kern, Nicky and Borriello,
+	Gaetano and Hannaford, Blake},
+  title = {A Hybrid Discriminative/Generative Approach for Modeling Human Activities.},
+  booktitle = {IJCAI},
+  year = {2005},
+  volume = {5},
+  pages = {766--772},
+  file = {:lester2005hybrid.pdf:PDF},
+  review = {"Feature Selection and Activity Classification using Boosted Decision
+	Stumps" looks attractive.}
+}
+
+@PHDTHESIS{liao2006location,
+  author = {Liao, Lin},
+  title = {Location-based activity recognition},
+  school = {University of Washington},
+  year = {2006}
+}
+
+@INCOLLECTION{liao2007hierarchical,
+  author = {Liao, Lin and Fox, Dieter and Kautz, Henry},
+  title = {Hierarchical conditional random fields for GPS-based activity recognition},
+  booktitle = {Robotics Research},
+  publisher = {Springer},
+  year = {2007},
+  pages = {487--506}
+}
+
+@INPROCEEDINGS{long2009single,
+  author = {Long, Xi and Yin, Bin and Aarts, Ronald M},
+  title = {Single-accelerometer-based daily physical activity classification},
+  booktitle = {Engineering in Medicine and Biology Society, 2009. EMBC 2009. Annual
+	International Conference of the IEEE},
+  year = {2009},
+  pages = {6107--6110},
+  organization = {IEEE},
+  owner = {lin hao},
+  timestamp = {2013.09.17}
+}
+
+@ARTICLE{luvstrek2009fall,
+  author = {Lu{\v{s}}trek, Mitja and Kalu{\v{z}}a, Bo{\v{s}}tjan},
+  title = {Fall detection and activity recognition with machine learning},
+  journal = {Informatica},
+  year = {2009},
+  volume = {33},
+  pages = {197--204},
+  number = {2},
+  file = {:luvstrek2009fall.pdf:PDF},
+  owner = {lin hao},
+  review = {This paper uses 8 Machine Learning Algorithms to do training "C4.5
+	decision trees, RIPPER decision rules, Naive Bayes, 3-Nearest Neighbors,
+	Support Vector Machine (SVM), Random Forest, Bagging and Adaboost
+	M1 boosting."},
+  timestamp = {2013.09.13}
+}
+
+@INPROCEEDINGS{maguire2009comparison,
+  author = {Maguire, Dominic and Frisby, Richard},
+  title = {Comparison of feature classification algorithm for activity recognition
+	based on accelerometer and heart rate data},
+  booktitle = {9th. IT \& T Conference},
+  year = {2009},
+  pages = {11},
+  file = {:maguire2009comparison.pdf:PDF},
+  owner = {lin hao},
+  review = {Although this paper mentioned that "The author wrote a Java class
+	using the Weka API (LabelGenerator.java)".
+	
+	
+	But I can't find some opensource dataset and codes, relevant to this
+	paper.
+	
+	
+	This paper also mentions a paper "On-body activity recognition in
+	a dynamic sensor network" that "examined
+	
+	seven office worker activities such as drinking water and using a
+	mouse via accelerometer and light sensor data."},
+  timestamp = {2013.09.13}
+}
+
+@INPROCEEDINGS{maurer2006activity,
+  author = {Maurer, Uwe and Smailagic, Asim and Siewiorek, Daniel P and Deisher,
+	Michael},
+  title = {Activity recognition and monitoring using multiple sensors on different
+	body positions},
+  booktitle = {Wearable and Implantable Body Sensor Networks, 2006. BSN 2006. International
+	Workshop on},
+  year = {2006},
+  pages = {4--pp},
+  organization = {IEEE},
+  owner = {lin hao},
+  review = {Using a eWatch to do activity recognition.
+	
+	
+	The Correlation based Feature Selection (CFS) method from the WEKA
+	toolkit was used to find feature sets.
+	
+	
+	Just like "mean,rms,std,var,mad,hist,prc,iqr,zcr,mcr..."
+	
+	
+	They also "placed our sensor hardware on the left wrist, belt, necklace,
+	in the right trouser pocket, shirt pocket, and bag."},
+  timestamp = {2013.09.13}
+}
+
 @INPROCEEDINGS{plotz2011feature,
   author = {Pl{\"o}tz, Thomas and Hammerla, Nils Y and Olivier, Patrick},
   title = {Feature learning for activity recognition in ubiquitous computing},
@@ -122,6 +383,59 @@
   year = {2011},
   pages = {1729--1734},
   organization = {AAAI Press}
+}
+
+@ARTICLE{pober2006development,
+  author = {Pober, David M and Staudenmayer, John and Raphael, Christopher and
+	Freedson, Patty S},
+  title = {Development of novel techniques to classify physical activity mode
+	using accelerometers},
+  journal = {Medicine and science in sports and exercise},
+  year = {2006},
+  volume = {38},
+  pages = {1626},
+  number = {9},
+  owner = {lin hao},
+  publisher = {WILLIAMS \& WILKINS},
+  timestamp = {2013.09.17}
+}
+
+@INPROCEEDINGS{ravi2005activity,
+  author = {Ravi, Nishkam and Dandekar, Nikhil and Mysore, Preetham and Littman,
+	Michael L},
+  title = {Activity recognition from accelerometer data},
+  booktitle = {AAAI},
+  year = {2005},
+  pages = {1541--1546},
+  file = {:ravi2005activity.pdf:PDF},
+  owner = {lin hao},
+  review = {This paper using base-level "Decision Tables, Decision Trees (C4.5),
+	K-nearest neighbors, SVM, Naive Bayes" in WEKA and also "a near exhaustive
+	set of classifiers: Boosting, Bagging, Plurality Voting, Stacking
+	with Ordinary-Decision trees (ODTs) and Stacking with Meta-Decision
+	trees (MDTs)." to recognize eight activities.},
+  timestamp = {2013.09.13}
+}
+
+@ARTICLE{rokicki2013diameter,
+  author = {Rokicki, Tomas and Kociemba, Herbert and Davidson, Morley and Dethridge,
+	John},
+  title = {The Diameter of the Rubik's Cube Group Is Twenty},
+  journal = {SIAM Journal on Discrete Mathematics},
+  year = {2013},
+  volume = {27},
+  pages = {1082--1105},
+  number = {2},
+  publisher = {SIAM},
+  review = {I see that "Twenty-Six Moves Suffice for Rubik's Cube" is most referenced
+	in the Rubik's Cube problem, I am shocked.
+	
+	
+	Now I find this paper, I am shocked again.
+	
+	
+	It is also very curious, at this picture(http://gifs.gifbin.com/102011/1319481605_cubestormer_ii_solves_ribiks_cube_in_53_secs.gif)
+	that a robot solved the Rubik's Cube in 5.55 seconds.}
 }
 
 @INPROCEEDINGS{sankar2012capturing,
@@ -134,6 +448,26 @@
   organization = {ACM},
   file = {:sankar2012capturing.pdf:PDF},
   review = {The topic indoor floor plan reconstruction using smartphones is attractive.}
+}
+
+@INPROCEEDINGS{stiefmeier2007gestures,
+  author = {Stiefmeier, Thomas and Roggen, Daniel and Tr{\"o}ster, Gerhard},
+  title = {Gestures are strings: efficient online gesture spotting and classification
+	using string matching},
+  booktitle = {Proceedings of the ICST 2nd international conference on Body area
+	networks},
+  year = {2007},
+  pages = {16},
+  organization = {ICST (Institute for Computer Sciences, Social-Informatics and Telecommunications
+	Engineering)},
+  file = {:stiefmeier2007gestures.pdf:PDF},
+  owner = {lin hao},
+  review = {This paper convert the gesture motion to string.
+	
+	
+	this paper makes me know what is edit distance. and let me know how
+	to convert the gesture motion to string.},
+  timestamp = {2013.09.12}
 }
 
 @INCOLLECTION{sun2010activity,
@@ -158,7 +492,36 @@
   booktitle = {Pattern Recognition (ICPR), 2012 21st International Conference on},
   year = {2012},
   pages = {3811--3814},
-  organization = {IEEE}
+  organization = {IEEE},
+  file = {:trung2012inertial.pdf:PDF},
+  review = {This paper using acceloremeter to recognize 5 similar classes: Level
+	walk, Upstairs, Downstairs, Upslope, Downslope.
+	
+	
+	Some thing I don't know is:
+	
+	1. The DTW(namic time warping) function.
+	
+	2. Why sigma^n_(i=1)(v_i)^2 = 1, How can this function meaningful.
+	
+	3. Firstly, I can't understand why the vectors of one class is just
+	one in Fig. 4, But when I looked at Fig. 3, I know actually, every
+	Training sample will have a Training vector.}
+}
+
+@ARTICLE{ward2006activity,
+  author = {Ward, Jamie A and Lukowicz, Paul and Troster, Gerhard and Starner,
+	Thad E},
+  title = {Activity recognition of assembly tasks using body-worn microphones
+	and accelerometers},
+  journal = {Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  year = {2006},
+  volume = {28},
+  pages = {1553--1567},
+  number = {10},
+  owner = {lin hao},
+  publisher = {IEEE},
+  timestamp = {2013.09.17}
 }
 
 @INPROCEEDINGS{xu2012co,
@@ -184,6 +547,20 @@
 	the location classification result is good as metioned in Table IV.}
 }
 
+@INPROCEEDINGS{yang2012online,
+  author = {Yang, Bo and Nevatia, Ram},
+  title = {An online learned CRF model for multi-target tracking},
+  booktitle = {Computer Vision and Pattern Recognition (CVPR), 2012 IEEE Conference
+	on},
+  year = {2012},
+  pages = {2034--2041},
+  organization = {IEEE},
+  owner = {lin hao},
+  review = {This paper looks difficult, I haven't read it in detail, just take
+	a look.},
+  timestamp = {2013.09.16}
+}
+
 @INPROCEEDINGS{yang2009toward,
   author = {Yang, Jun},
   title = {Toward physical activity diary: motion recognition using simple acceleration
@@ -193,7 +570,8 @@
   year = {2009},
   pages = {1--10},
   organization = {ACM},
-  file = {:yang2009toward.pdf:PDF}
+  file = {:yang2009toward.pdf:PDF},
+  review = {Using HMM to smooth the activity}
 }
 
 @INPROCEEDINGS{zhang2012motion,
@@ -245,5 +623,15 @@
 	3.CMU Multi-Modal Activity Database (CMU-MMAC) : http://kitchen.cs.cmu.edu/
 	
 	4.OPPORTUNITY Dataset : http://archive.ics.uci.edu/ml/datasets/OPPORTUNITY+Activity+Recognition}
+}
+
+@INPROCEEDINGS{zheng2010collaborative,
+  author = {Zheng, Vincent W and Zheng, Yu and Xie, Xing and Yang, Qiang},
+  title = {Collaborative location and activity recommendations with GPS history
+	data},
+  booktitle = {Proceedings of the 19th international conference on World wide web},
+  year = {2010},
+  pages = {1029--1038},
+  organization = {ACM}
 }
 
