@@ -1,0 +1,60 @@
+\chapter{2013年9月11日}
+\section{使用github协作团队开发}
+\subsection{github初入门径}
+首先在github.com上面申请账号，创建工程。
+
+\textbf{Create a new repository on the command line}
+\begin{lstlisting}
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/imlinhao/location.git
+git push -u origin master
+\end{lstlisting}
+
+\textbf{Push an existing repository from the command line}
+\begin{lstlisting}
+git remote add origin https://github.com/imlinhao/location.git
+git push -u origin master
+\end{lstlisting}
+
+\subsection{github常用命令}
+\begin{itemize}
+\item \textbf{更新项目（新加了文件）}
+\begin{lstlisting}
+git add .    //`这样可以自动判断新加了哪些文件，或者手动加入文件名字`
+git commit   //`提交到本地仓库`
+git push origin master    //`不是新创建的，不用再`add `到`remote`上了`
+\end{lstlisting}
+
+\item \textbf{更新项目（没新加文件，只有删除或者修改文件）}
+\begin{lstlisting}
+git commit -a          //`记录删除或修改了哪些文件`
+git push origin master  //`提交到`github
+\end{lstlisting}
+
+\item \textbf{忽略一些文件，比如*.o等}
+\begin{lstlisting}
+vim .gitignore     //`把文件类型加入到`.gitignore`中，保存然后就可以`git add . `能自动过滤这种文件`
+\end{lstlisting}
+
+\item \textbf{clone代码到本地}
+\begin{lstlisting}
+git clone https://github.com/imlinhao/location.git
+ //`假如本地已经存在了代码，而仓库里有更新，把更改的合并到本地的项目`
+git fetch origin    //`获取远程更新`
+git merge origin/master //`把更新的内容合并到本地分支`
+\end{lstlisting}
+
+\item \textbf{撤销}
+\begin{lstlisting}
+git reset
+\end{lstlisting}
+
+\item \textbf{删除}
+\begin{lstlisting}
+git rm  * //`不是用`rm
+\end{lstlisting}
+\end{itemize}
+
