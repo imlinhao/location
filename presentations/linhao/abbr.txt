@@ -1,0 +1,48 @@
+3DD 3D Deviation of the acceleration signals
+ACC Accelerometers
+AMB Ambulation activities (see Table I)
+ANN Artificial Neural Network
+ALR Additive Logistic Regression classifier
+AR Autoregressive Model Coefficients
+AV Angular velocity
+BN Bayesian Network Classifier
+CART Classification And Regression Tree
+DA Daily activities (see Table I)
+DCT Discrete Cosine Transform
+DT Decision Tree-Based Classifier
+DTW Dynamic Time Warping
+ENV Environmental sensors
+FBF Fuzzy Basis Function
+FD Frequency-domain features
+GYR Gyroscope
+HMM Hidden Markov Models
+HRB Heart Rate Beats above the resting heart rate
+HRM Heart Rate Monitor
+HW Housework activities (see Table I)
+KNN k-Nearest Neighbors classifier
+LAB Laboratory controlled experiment
+LDA Linear Discriminant Analysis
+LS Least Squares algorithm
+MIL Military activities
+MNL Monolithic classifier (subject independent)
+NAT Naturalistic experiment
+NB The Na¡§ ?ve Bayes classifier
+NDDF Normal Density Discriminant Function
+N/S Not Specified
+PCA Principal Component Analysis
+PHO Activities related to phone usage (see Table I)
+PR Polynomial Regression
+RFIS Recurrent Fuzzy Inference System
+SD Subject Dependent evaluation
+SFFS Sequential Forward Feature Selection
+SI Subject Independent evaluation
+SMA Signal Magnitude Area
+SMCRF Semi-Markovian Conditional Random Field
+SPC User-specific classifier (subject dependent)
+SPI Spiroergometry
+TA Tilt Angle
+TD Time-domain features
+TF Transient Features [25]
+TR Transitions between activities
+UB Upper body activities (see Table I)
+VS Vital sign sensors
