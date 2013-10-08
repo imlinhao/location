@@ -1,0 +1,25 @@
+\chapter{2013年9月18日}
+\section{Feature Selection using Weka}
+在活动识别里面，在特征向量的众多特征里面抽取出一些特别重要的特征，也就是特征提取，或者降维，那对于计算量来说都是特别有用的。甚至，我在考虑online的特征选取是不是也可做也是一个问题。
+
+不过，如果能用weka实际体验一把的话，那不管是从理解程度上，还是对于实际操作上都会有所提高吧。好，这里就给出一个参考的链接\url{https://www.laps.ufpa.br/aldebaro/weka/feature_selection.html}。
+
+其中觉得有一句话非常有意思：\textbf{Note that strictly speaking, PCA is not a feature selection but a feature extraction method. The new attributes are obtained by a linear combination of the original attributes. Dimensionality reduction is achieved by keeping the components with highest variance.}，一下就讲了一个我没有注意过的概念，就是feature selection和feature extraction的区别。
+
+不过看了一会儿以后，发现网页用的weka版本是3.3.4的，而我目前用的是3.6.10的，weka的类结构以及提供的算法已经有了很大的变化。所以最好的参考资料，我觉得就是安装目录底下的WekaManual了。
+
+后续又看了一个讲Weka PCA的网页(\url{http://weka.8497.n7.nabble.com/WEKA-PCA-Eigenvalues-td12741.html})，摘录两段话：
+
+It depends on whether you're using 
+weka.attributeSelection.PrincipalComponents or 
+weka.filters.unsupervised.attribute.PrincipalComponents. In the both 
+cases, you can comment out the block of code that creates and configures 
+the Remove filter. In the former it is in the 
+buildAttributeConstructor() method and in the latter it is in the 
+setup() method. 
+
+Are you using the -C option to use the mean centered + covariance matrix 
+rather than standardized + correlation matrix? I believe that Matlab 
+uses the covariance matrix. 
+
+Weka中使用PCA(Filter里面选择weka.filters.unsuperived.attribute.PrincipleComponents)对UCI HAR Dataset进行特征抽取(PrincipalComponents -R 0.95 -A 5 -M -1)之后，原先561+1个属性，变成了102+1个属性。
