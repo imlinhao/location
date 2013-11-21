@@ -102,6 +102,14 @@
   pages = {1345--1350}
 }
 
+@ARTICLE{dean2004mapreduce,
+  author = {Dean, Jeffrey and Ghemawat, Sanjay},
+  title = {MapReduce: Simplified Data Processing on Large Clusters},
+  journal = {To appear in OSDI},
+  year = {2004},
+  pages = {1}
+}
+
 @INPROCEEDINGS{dernbach2012simple,
   author = {Dernbach, Stefan and Das, Barnan and Krishnan, Narayanan C and Thomas,
 	Brian L and Cook, Diane J},
