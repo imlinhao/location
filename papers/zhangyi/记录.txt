@@ -1,0 +1,15 @@
+一：git的使用
+下载更新操作命令：git pull
+上传更新操作命令：git papers/zhangyi
+				  git commit -m  "radar article"
+				  git push
+
+二：文章阅读注意点：
+打开jabref用谷歌找到文章添加
+在review中记录文章要点
+在location中的papers下的zhangyi文件夹下把问价复制进去命名以时间+名字
+
+三：latex的日志记录
+在daily_report文件夹下的zhangyi问价夹下diss.tex中加一句\include{body/day2013-09-11}
+当要生成pdf时我们进入diss.tex所在文件夹下
+使用命令：xelatex diss.tex

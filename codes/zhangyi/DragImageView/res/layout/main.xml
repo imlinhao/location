@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <com.jj.drag.DragImageView
+        android:id="@+id/div_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+        <EditText 
+            android:id="@+id/lon"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:hint="请输入经度"
+            />
+        <EditText 
+            android:id="@+id/lat"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:hint="请输入纬度"
+            />
+        <ImageButton 
+            android:id="@+id/imageButton1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/custom_loc"
+            android:alpha="50"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
