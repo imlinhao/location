@@ -1,0 +1,39 @@
+%%==========================
+%% chapter01.tex for SJTU Master Thesis
+%% based on CASthesis
+%% modified by wei.jianwen@gmail.com
+%% version: 0.3a
+%% Encoding: UTF-8
+%% last update: Dec 5th, 2010
+%%==================================================
+
+%\bibliographystyle{sjtu2} %[此处用于每章都生产参考文献]
+\chapter{2013年6月4日}
+%\label{chap:what}
+\section{diff的使用}
+\subsection{diff两个文件夹}
+列出两个目录（及其子目录）下有差异的文件名称：
+\begin{lstlisting}
+diff -rq a b
+\end{lstlisting}
+-q：仅显示有无差异，不显示详细的信息;
+-r：递归比较子目录中的文件。
+
+\subsection{制作补丁}
+这个稍稍参照一下这个链接吧 \url{http://zhengdl126.iteye.com/blog/1559284}。
+\begin{lstlisting}
+diff -Nur ssc ssc\_update > change.patch #`制作补丁`
+patch -Np0 < change.patch #`发布`
+patch -Rp0 < change.patch #`还原`
+\end{lstlisting}
+
+\section{Hack TDMA IIT - V. Sevani Version}
+\subsection{madwifi-trunk-r3314包编译}
+其实昨天就已经有一套方案可以解决V. Sevani版的madwifi包编译了，具体一点就是先make package/madwifi/compile V=99之后，修改Makefile里面的ATH\_RATE变量，然后用vsevani的madwifi包，覆盖build\_dir下的madwifi包，touch全包之后，再make package/madwifi/compile V=99，就可以了。
+
+今天想用另一套方案，方案的思想就是不去修改Makefile了，而去调整vsevani madwifi包的目录结构。具体步骤就是：
+\begin{lstlisting}
+1.`使用原版本的`Makefile`，`backfire/package/madwifi/Makefile
+2.`删除`backfire/build\_dir/linux-ar71xx/madwifi-trunk-r3314`下的所有文件，安全起见`backfire/dl/madwifi-trunk-r3314.tar.gz`也给删掉`
+3.`进入`backfire`根目录，`make package/madwifi/compile V=99
+\end{lstlisting}
