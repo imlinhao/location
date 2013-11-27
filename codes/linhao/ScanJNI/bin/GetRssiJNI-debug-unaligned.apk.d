@@ -1,0 +1,20 @@
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\GetRssiJNI-debug-unaligned.apk : \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\GetRssiJNI.ap_ \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\classes.dex \
+D:\adt-bundle-windows-x86_64-20130917\sdk\tools\support\annotations.jar \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\armeabi\libhao.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\armeabi\libnl-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\armeabi\libnl-genl-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\armeabi\libnl-route-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\armeabi-v7a\libhao.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\armeabi-v7a\libnl-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\armeabi-v7a\libnl-genl-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\armeabi-v7a\libnl-route-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\mips\libhao.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\mips\libnl-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\mips\libnl-genl-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\mips\libnl-route-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\x86\libhao.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\x86\libnl-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\x86\libnl-genl-3.so \
+F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\libs\x86\libnl-route-3.so \
