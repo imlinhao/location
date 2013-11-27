@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView
+	android:id="@+id/tvGps"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="GPS scanning..."
+    />
+
+<LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ToggleButton 
+        android:id="@+id/togbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:onClick="stillRecord"
+        android:textOn="关闭"
+        android:textOff="记录"
+        />
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="\n\n\n\n\n"
+        />
+    
+    <Button 
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="moveRecord"
+        android:text="start"
+        />
+    
+</LinearLayout>
+</LinearLayout>
+
