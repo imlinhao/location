@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:11
+-keep class com.hao.sr.SensorRecord { <init>(...); }
+
+# onClick res/layout/main.xml #generated:34
+-keepclassmembers class * { *** moveRecord(...); }
+
+# onClick res/layout/main.xml #generated:19
+-keepclassmembers class * { *** stillRecord(...); }
+

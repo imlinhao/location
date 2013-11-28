@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SensorRecord</string>
+    <string name="record_on">记录中</string>
+    <string name="record_off">未记录</string>
 </resources>

@@ -19,11 +19,11 @@
     <ToggleButton 
         android:id="@+id/togbtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:checked="false"
         android:onClick="stillRecord"
-        android:textOn="关闭"
-        android:textOff="记录"
+		android:textOn="@string/record_on"
+		android:textOff="@string/record_off"
         />
     <TextView 
         android:layout_width="fill_parent"
@@ -34,7 +34,7 @@
     <Button 
         android:id="@+id/btn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:onClick="moveRecord"
         android:text="start"
         />

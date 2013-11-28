@@ -10,7 +10,10 @@ import android.content.Intent;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.provider.Settings;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 import android.hardware.SensorEventListener;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -24,6 +27,8 @@ import java.util.Calendar;
 import java.io.File;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.IOException;
+
 import android.os.PowerManager;
 import android.content.BroadcastReceiver;
 import android.os.Build;
@@ -63,6 +68,16 @@ public class SensorRecord extends Activity
 	String PRESS_FILENAME = "press.txt";
 	String PROX_FILENAME = "prox.txt";
 	String LACC_FILENAME = "lacc.txt";
+	
+	String VOICETIME_FILENAME="voicetime.txt";
+	String STILLTIME_FILENAME="stilltime.txt";
+	String MOVETIME_FILENAME="movetime.txt";
+	
+	
+	BufferedWriter mVoiceBW;
+	BufferedWriter mStillBW;
+	BufferedWriter mMoveBW;
+	
 	BufferedWriter mPhoneinfoBW;
 	BufferedWriter mWifiBW;
 	BufferedWriter mGpsBW;
@@ -92,9 +107,17 @@ public class SensorRecord extends Activity
 	StringBuffer mPressSB;
 	StringBuffer mProxSB;
 	StringBuffer mLaccSB;
+	
+	StringBuffer mVoiceSB;
+	StringBuffer mStillSB;
+	StringBuffer mMoveSB;
+	
 	boolean mOrigWifiState;
 	int mGpsNum = 0;
 	TextView tvGps;
+	
+	Button moveBtn;
+	ToggleButton stillBtn;
 
     /** Called when the activity is first created. */
     @Override
@@ -103,6 +126,11 @@ public class SensorRecord extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 		tvGps = (TextView) findViewById(R.id.tvGps);
+		moveBtn = (Button) findViewById(R.id.btn);
+		stillBtn = (ToggleButton) findViewById(R.id.togbtn);
+		
+
+		
 		mPm = (PowerManager)getSystemService(POWER_SERVICE);
 		mWakeLock = mPm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK,"SensorRecord");
 		mWakeLock.acquire();
@@ -179,6 +207,10 @@ public class SensorRecord extends Activity
 		File pressFile = new File(mTimePath+"/"+PRESS_FILENAME);
 		File proxFile = new File(mTimePath+"/"+PROX_FILENAME);
 		File laccFile = new File(mTimePath+"/"+LACC_FILENAME);
+		
+		File voiceFile = new File(mTimePath+"/"+VOICETIME_FILENAME);
+		File stillFile = new File(mTimePath+"/"+STILLTIME_FILENAME);
+		File moveFile = new File(mTimePath+"/"+MOVETIME_FILENAME);
 		try{
 			if(!phoneinfoFile.exists()){phoneinfoFile.createNewFile();}
 			if(!wifiFile.exists()){wifiFile.createNewFile();}
@@ -204,6 +236,10 @@ public class SensorRecord extends Activity
 			mPressBW = new BufferedWriter(new FileWriter(pressFile));
 			mProxBW = new BufferedWriter(new FileWriter(proxFile));
 			mLaccBW = new BufferedWriter(new FileWriter(laccFile));
+			
+			mVoiceBW = new BufferedWriter(new FileWriter(voiceFile));
+			mStillBW = new BufferedWriter(new FileWriter(stillFile));
+			mMoveBW = new BufferedWriter(new FileWriter(moveFile));
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -222,6 +258,30 @@ public class SensorRecord extends Activity
 		startRecording();
     }
 
+	public void moveRecord(View v)
+	{
+		try{
+			mMoveBW.write(System.currentTimeMillis()+"\n");
+		}catch(Exception e)
+		{
+			Toast.makeText(SensorRecord.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
+		}
+		
+	}
+	
+	public void stillRecord(View v)
+	{
+		try{
+			if(stillBtn.isChecked())
+			{
+				mStillBW.write(System.currentTimeMillis()+"\n");
+			}else{
+				mStillBW.write(System.currentTimeMillis()+"\n");
+			}
+		} catch(Exception e){
+			Toast.makeText(SensorRecord.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
+		}
+	}
 	@Override
 	public void onDestroy(){
 		mIsScanning = false;
@@ -250,6 +310,10 @@ public class SensorRecord extends Activity
 			mPressBW.flush();
 			mProxBW.flush();
 			mLaccBW.flush();
+			mVoiceBW.flush();
+			mStillBW.flush();
+			mMoveBW.flush();
+
 			mWifiBW.close();
 			mGpsBW.close();
 			mAccBW.close();
@@ -261,6 +325,9 @@ public class SensorRecord extends Activity
 			mPressBW.close();
 			mProxBW.close();
 			mLaccBW.close();
+			mVoiceBW.close();
+			mStillBW.close();
+			mMoveBW.close();
 			Toast.makeText(SensorRecord.this,"All Done",Toast.LENGTH_SHORT).show();
 		}catch(Exception e){
 			Toast.makeText(SensorRecord.this,"Exception",Toast.LENGTH_SHORT).show();
@@ -283,7 +350,7 @@ public class SensorRecord extends Activity
 			mGpsSB.append(location.getTime()+"\n");
 			//Toast.makeText(SensorRecord.this,mGpsSB.toString(),Toast.LENGTH_SHORT).show();
 			++mGpsNum;
-			tvGps.setText("GpsNum: "mGpsNum+"\n"+mGpsSB.toString());
+			tvGps.setText("GpsNum: "+mGpsNum+"\n"+mGpsSB.toString());
 			try{
 				mGpsBW.write(mGpsSB.toString());
 			}catch(Exception e){
@@ -441,6 +508,13 @@ public class SensorRecord extends Activity
 	}
 
 	void writeAudioDataToFile(){
+		try{
+			mVoiceBW.write(System.currentTimeMillis()+"\n");
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
 		String filePath = mTimePath+"/"+AUDIO_FILENAME;
 		short sData[] = new short[bufferElements2Rec];
 		FileOutputStream os = null;
@@ -460,6 +534,7 @@ public class SensorRecord extends Activity
 		}
 		try{
 			os.close();
+			mVoiceBW.write(System.currentTimeMillis()+"\n");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

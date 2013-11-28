@@ -161,7 +161,7 @@ public class SensorRecord extends Activity
 		mLaccSB = new StringBuffer(256);
 
 		Calendar c = Calendar.getInstance();	
-		mTimeDir = c.get(Calendar.YEAR)+"_"+c.get(Calendar.MONTH)+"_"
+		mTimeDir = c.get(Calendar.YEAR)+"_"+(c.get(Calendar.MONTH)+1)+"_"
 			+c.get(Calendar.DAY_OF_MONTH)+"_"+c.get(Calendar.HOUR_OF_DAY)+"_"
 			+c.get(Calendar.MINUTE)+"_"+c.get(Calendar.SECOND);
 		if(Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
@@ -264,21 +264,23 @@ public class SensorRecord extends Activity
 			mMoveBW.write(System.currentTimeMillis()+"\n");
 		}catch(Exception e)
 		{
-			e.printStackTrace();
+			Toast.makeText(SensorRecord.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
 		}
 		
 	}
 	
-	public void stillRecord(View v) throws Exception
+	public void stillRecord(View v)
 	{
-		if(stillBtn.isChecked())
-		{
-			mStillBW.write(System.currentTimeMillis()+"\n");
-		}else{
-			mStillBW.write(System.currentTimeMillis()+"\n");
+		try{
+			if(stillBtn.isChecked())
+			{
+				mStillBW.write(System.currentTimeMillis()+"\n");
+			}else{
+				mStillBW.write(System.currentTimeMillis()+"\n");
+			}
+		} catch(Exception e){
+			Toast.makeText(SensorRecord.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
 		}
-		
-		
 	}
 	@Override
 	public void onDestroy(){
@@ -308,6 +310,10 @@ public class SensorRecord extends Activity
 			mPressBW.flush();
 			mProxBW.flush();
 			mLaccBW.flush();
+			mVoiceBW.flush();
+			mStillBW.flush();
+			mMoveBW.flush();
+
 			mWifiBW.close();
 			mGpsBW.close();
 			mAccBW.close();
