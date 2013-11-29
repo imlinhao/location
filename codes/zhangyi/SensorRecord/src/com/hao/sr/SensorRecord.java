@@ -279,14 +279,14 @@ public class SensorRecord extends Activity
 	public void moveRecord(View v)
 	{
 		try{
-			Log.v(TAG, "moveRecode---start record");
+			Log.d(TAG, "moveRecode---start record");
 			mLogBW.write("moveRecode---start record"+"\n");
 			mMoveBW.write(System.currentTimeMillis()+"\n");
-			Log.v(TAG, "moveRecode---finish record"+System.currentTimeMillis());
+			Log.d(TAG, "moveRecode---finish record"+System.currentTimeMillis());
 			mLogBW.write("moveRecode---finish record"+"\n");
 		}catch(Exception e)
 		{
-			Log.v(TAG, "moveRecode---record error");
+			Log.d(TAG, "moveRecode---record error");
 			try{
 				mLogBW.write("moveRecode---record error"+"\n");
 			}catch(Exception e1){
@@ -303,20 +303,20 @@ public class SensorRecord extends Activity
 		try{
 			if(stillBtn.isChecked())
 			{
-				Log.v(TAG, "stillRecord---start record");
+				Log.d(TAG, "stillRecord---start record");
 				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
-				Log.v(TAG, "stillRecord---finish record"+System.currentTimeMillis());
+				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
 				mLogBW.write("stillRecord---finish record"+"\n");
 			}else{
-				Log.v(TAG, "stillRecord---start record");
+				Log.d(TAG, "stillRecord---start record");
 				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
-				Log.v(TAG, "stillRecord---finish record"+System.currentTimeMillis());
+				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
 				mLogBW.write("stillRecord---finish record"+"\n");
 			}
 		} catch(Exception e){
-			Log.v(TAG, "stillRecord---record error");
+			Log.d(TAG, "stillRecord---record error");
 			try{
 				mLogBW.write("stillRecord---record error"+"\n");
 			}catch(Exception e1)
@@ -374,13 +374,13 @@ public class SensorRecord extends Activity
 			mVoiceBW.close();
 			mStillBW.close();
 			mMoveBW.close();
-			Log.v(TAG, "AllRecorded---finish record");
+			Log.d(TAG, "AllRecorded---finish record");
 			mLogBW.write("AllRecorded---finish record"+"\n");
 			
 			mLogBW.close();
 			Toast.makeText(SensorRecord.this,"All Done",Toast.LENGTH_SHORT).show();
 		}catch(Exception e){
-			Log.v(TAG, "AllRecord---record ERROR");
+			Log.d(TAG, "AllRecord---record ERROR");
 			try{
 				mLogBW.write("AllRecord---record ERROR"+"\n");
 				mLogBW.close();
@@ -567,14 +567,14 @@ public class SensorRecord extends Activity
 
 	void writeAudioDataToFile(){
 		try{
-			Log.v(TAG, "firstvoiceRecord---start record");
+			Log.d(TAG, "firstvoiceRecord---start record");
 			mLogBW.write("firstvoiceRecord---start record"+"\n");
 			mVoiceBW.write(System.currentTimeMillis()+"\n");
-			Log.v(TAG, "firstvoiceRecord---finish record"+System.currentTimeMillis());
+			Log.d(TAG, "firstvoiceRecord---finish record"+System.currentTimeMillis());
 			mLogBW.write("firstvoiceRecord---finish record"+"\n");
 		}catch(Exception e)
 		{
-			Log.v(TAG, "firstvoiceRecord---record ERROR");
+			Log.d(TAG, "firstvoiceRecord---record ERROR");
 			try{
 				mLogBW.write("firstvoiceRecord---record ERROR"+"\n");
 			}catch(Exception e1){
@@ -603,10 +603,10 @@ public class SensorRecord extends Activity
 		}
 		try{
 			os.close();
-			Log.v(TAG, "secondvoiceRecord---start record");
+			Log.d(TAG, "secondvoiceRecord---start record");
 			mLogBW.write("secondvoiceRecord---start record"+"\n");
 			mVoiceBW.write(System.currentTimeMillis()+"\n");
-			Log.v(TAG, "secondvoiceRecord---finish record"+System.currentTimeMillis());
+			Log.d(TAG, "secondvoiceRecord---finish record"+System.currentTimeMillis());
 			mLogBW.write("secondvoiceRecord---finish record"+"\n");
 		}catch(Exception e){
 			e.printStackTrace();

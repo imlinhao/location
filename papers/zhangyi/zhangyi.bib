@@ -13,6 +13,173 @@
   review = {iiii}
 }
 
+@INPROCEEDINGS{Wu1308,
+  author = {Chenshu Wu and Zheng Yang and Zimu Zhou and Yunhao Liu and Mingyan
+	Liu and  and ?School of SoftwareTNList and Tsinghua University and
+	?CSE and Hong Kong University of Science \& Technology},
+  title = {DorFin: WiFi Fingerprint-based Localization Revisited},
+  year = {1308},
+  file = {:dorfin.pdf:PDF},
+  review = {DorFin: WiFi Fingerprint-based Localization
+	
+	Revisited
+	
+	
+	Chenshu Wu?, Zheng Yang?, Zimu Zhou?, Yunhao Liu? and Mingyan Liu?
+	
+	?School of Software and TNList, Tsinghua University
+	
+	?CSE, Hong Kong University of Science & Technology
+	
+	
+	?Department of EECS, University of Michigan
+	
+	{wu, yang, zimuzhou, yunhao}@greenorbs.com, mingyan@eecs.umich.edu
+	
+	
+	Abstract¡ªAlthough WiFi fingerprint-based indoor localization [13],
+	[15], can experience rapid performance degradation in
+	
+	is attractive, its accuracy remains a primary challenge especially
+	realistic environments, with median error consistently above
+	
+	in mobile environments. Existing approaches either appeal to 5 meters
+	[16]. In addition, there are always unacceptably
+	
+	physical layer information or rely on extra wireless signals for
+	
+	high accuracy. In this paper, we revisit the RSS fingerprint-based
+	large tail errors, e.g., 10?20m or larger. Recent works [12],
+	
+	localization scheme and reveal crucial observations that act as the
+	[16] found that large errors of prior works could range
+	
+	root causes of localization errors, yet are surprisingly overlooked
+	from 12 to around 40 meters. Mobility further deteriorates
+	
+	or even unseen in previous works. Specifically, we recognize the performance
+	especially for smartphone based methods.
+	
+	APs¡¯ diverse discrimination for fingerprinting a specific location,
+	Efforts to gain high accuracy include to leverage physical
+	
+	observe the RSS inconsistency caused by signal fluctuations and
+	
+	human body blockages, and uncover the RSS outdated problem layer information
+	[17] and incorporate acoustic ranging [6],
+	
+	on commodity smartphones. Inspired by these insights, we devise [12],
+	among others. These methods typically either rely on
+	
+	a discrimination factor to quantify different APs¡¯ discrimination,
+	information unavailable on commodity smartphones, or resort
+	
+	incorporate robust regression to tolerate outlier measurements, to
+	unrealistic cooperation among a dense crowd of peers.
+	
+	and reassemble different fingerprints to cope with outdated RSSs.
+	In this paper, we revisit the WiFi fingerprinting localization
+	
+	Combining these techniques in a unified solution, we propose
+	
+	DorFin, a novel scheme of fingerprint generation, representa- framework
+	and ask whether it is possible to achieve accurate
+	
+	tion, and matching, which yields remarkable accuracy without and robust
+	fingerprint-based localization, especially for mobile
+	
+	incurring extra cost. Extensive experiments demonstrate that phones,
+	without degrading the ubiquity or increasing the costs.
+	
+	DorFin achieves mean error of 2 meters and more importantly, To investigate
+	the root cause of limited localization ac-
+	
+	bounds the 95th percentile error under 5.5 meters; these are curacy,
+	we conduct extensive experiments and uncover the
+	
+	about 56% and 69% lower, respectively, compared with the state-
+	
+	of-the-art schemes such as Horus and RADAR. following characteristics
+	of WiFi fingerprint-based localiz-
+	
+	
+	ation: 1) APs have different discriminatory capabilities to
+	
+	I. INTRODUCTION fingerprint a specific location since RSS changes
+	are inversely
+	
+	
+	The proliferation of mobile computing has spurred extensive proportional
+	to the physical distance, subject to radio signal
+	
+	interests in location-based services, leading to an urgent need propagation
+	laws. Intuitively, faraway APs may lead to large
+	
+	for fine-grained location. The past decade has witnessed the location
+	estimation errors while close ones can help mitigate
+	
+	conceptualization and development of various wireless indoor the location
+	uncertainty. 2) Biased RSS measurements caused
+	
+	localization techniques, including WiFi [1], [2], RFID [3], by signal
+	fluctuation and human body blockage may present
+	
+	[4], acoustic signals [5], [6], ultrasound [7], [8], etc. Due to themselves
+	as outliers in fingerprint matching. Human body
+	
+	the wide deployment and availability of WiFi infrastructure, blockage
+	to smartphones can remove line-of-sight and weaken
+	
+	WiFi fingerprint-based indoor localization has become one of the received
+	signal by up to 10dB, thus greatly exagger-
+	
+	the most attractive localization techniques [9]¨C[14]. Roughly ating
+	the discrepancies of fingerprints measured from the
+	
+	speaking, a fingerprint-based scheme consists of two stages: same
+	location. 3) RSS measurements may be outdated due
+	
+	site survey and fingerprint matching. During site survey (a.k.a to
+	hardware and software limitations of commodity wireless
+	
+	calibration or war-driving), received signal strengths (RSS) devices.
+	In other words, latest reported RSS values could be
+	
+	from multiple WiFi access points (APs) are recorded at known duplicates
+	of previous scans performed several seconds ago.
+	
+	locations to construct a fingerprint database. To locate a user, Considering
+	user mobility, the outdated RSS could in fact
+	
+	localization algorithms match his RSS measurements against be measurements
+	done at a previous location, resulting in
+	
+	the pre-labeled records and estimate his location to be the one outdated
+	fingerprints consisting of RSS measurements from
+	
+	with the best-fitted fingerprint. multiple locations. In overlooking
+	such outdated information,
+	
+	
+	There is generally a tradeoff between accuracy, ubiquity, previous
+	works directly compare the outdated fingerprints
+	
+	and cost in designing a pervasive indoor localization system. with
+	those collected at a single location, incurring frequent
+	
+	Accuracy has long been the primary challenge especially in fingerprint
+	mismatches. The above are key reasons behind
+	
+	mobile environments. Even schemes that have been reported location
+	errors of fingerprint-based schemes, especially in
+	
+	to have very high accuracy in some instances, e.g., [2], mobile environments;
+	yet surprisingly they have not been
+	
+	
+	arXiv:1308.6663v1  [cs.NI]  30 Aug 2013}
+}
+
 @ARTICLE{,
   author = {Youssef M, Agrawala A. The Horus WLAN location determination system[C]//Proceedings
 	of the 3rd international conference on Mobile systems, applications,
