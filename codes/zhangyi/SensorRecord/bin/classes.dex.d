@@ -12,3 +12,4 @@ C:\Users\dell\Desktop\location\codes\zhangyi\SensorRecord\bin\classes\com\hao\sr
 C:\Users\dell\Desktop\location\codes\zhangyi\SensorRecord\bin\classes\com\hao\sr\SensorRecord$MySensorEventListener.class \
 C:\Users\dell\Desktop\location\codes\zhangyi\SensorRecord\bin\classes\com\hao\sr\SensorRecord.class \
 C:\Users\dell\Desktop\location\codes\zhangyi\SensorRecord\bin\classes\com\hao\sr\SensorRecord.java~ \
+C:\Users\dell\Desktop\location\codes\zhangyi\SensorRecord\bin\classes\R.java.d \

@@ -282,6 +282,7 @@ public class SensorRecord extends Activity
 			Log.d(TAG, "moveRecode---start record");
 			mLogBW.write("moveRecode---start record"+"\n");
 			mMoveBW.write(System.currentTimeMillis()+"\n");
+			mMoveBW.flush();
 			Log.d(TAG, "moveRecode---finish record"+System.currentTimeMillis());
 			mLogBW.write("moveRecode---finish record"+"\n");
 		}catch(Exception e)
@@ -306,12 +307,14 @@ public class SensorRecord extends Activity
 				Log.d(TAG, "stillRecord---start record");
 				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
+				mStillBW.flush();
 				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
 				mLogBW.write("stillRecord---finish record"+"\n");
 			}else{
 				Log.d(TAG, "stillRecord---start record");
 				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
+				mStillBW.flush();
 				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
 				mLogBW.write("stillRecord---finish record"+"\n");
 			}
@@ -606,6 +609,7 @@ public class SensorRecord extends Activity
 			Log.d(TAG, "secondvoiceRecord---start record");
 			mLogBW.write("secondvoiceRecord---start record"+"\n");
 			mVoiceBW.write(System.currentTimeMillis()+"\n");
+			mVoiceBW.flush();
 			Log.d(TAG, "secondvoiceRecord---finish record"+System.currentTimeMillis());
 			mLogBW.write("secondvoiceRecord---finish record"+"\n");
 		}catch(Exception e){

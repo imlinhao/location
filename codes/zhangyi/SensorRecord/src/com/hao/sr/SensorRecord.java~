@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -40,6 +41,8 @@ import android.widget.TextView;
 
 public class SensorRecord extends Activity
 {
+	private static final String  TAG = "WRITE_TO_SDCARD----->";
+	
 	static final int SAMPLERATE = 8000;
 	static final int CHANNELS = AudioFormat.CHANNEL_IN_MONO;
 	static final int AUDIO_ENCODING = AudioFormat.ENCODING_PCM_16BIT;
@@ -72,11 +75,13 @@ public class SensorRecord extends Activity
 	String VOICETIME_FILENAME="voicetime.txt";
 	String STILLTIME_FILENAME="stilltime.txt";
 	String MOVETIME_FILENAME="movetime.txt";
+	String LOG_FILENAME = "log.txt";
 	
 	
 	BufferedWriter mVoiceBW;
 	BufferedWriter mStillBW;
 	BufferedWriter mMoveBW;
+	BufferedWriter mLogBW;
 	
 	BufferedWriter mPhoneinfoBW;
 	BufferedWriter mWifiBW;
@@ -111,6 +116,7 @@ public class SensorRecord extends Activity
 	StringBuffer mVoiceSB;
 	StringBuffer mStillSB;
 	StringBuffer mMoveSB;
+	StringBuffer mLogSB;
 	
 	boolean mOrigWifiState;
 	int mGpsNum = 0;
@@ -159,9 +165,13 @@ public class SensorRecord extends Activity
 		mPressSB = new StringBuffer(256);
 		mProxSB = new StringBuffer(256);
 		mLaccSB = new StringBuffer(256);
+		mVoiceSB = new StringBuffer(256);
+		mStillSB = new StringBuffer(256);
+		mMoveSB = new StringBuffer(256);
+		mLogSB = new StringBuffer(256);
 
 		Calendar c = Calendar.getInstance();	
-		mTimeDir = c.get(Calendar.YEAR)+"_"+c.get(Calendar.MONTH)+"_"
+		mTimeDir = c.get(Calendar.YEAR)+"_"+(c.get(Calendar.MONTH)+1)+"_"
 			+c.get(Calendar.DAY_OF_MONTH)+"_"+c.get(Calendar.HOUR_OF_DAY)+"_"
 			+c.get(Calendar.MINUTE)+"_"+c.get(Calendar.SECOND);
 		if(Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
@@ -211,6 +221,7 @@ public class SensorRecord extends Activity
 		File voiceFile = new File(mTimePath+"/"+VOICETIME_FILENAME);
 		File stillFile = new File(mTimePath+"/"+STILLTIME_FILENAME);
 		File moveFile = new File(mTimePath+"/"+MOVETIME_FILENAME);
+		File logFile = new File(mTimePath+"/"+LOG_FILENAME);
 		try{
 			if(!phoneinfoFile.exists()){phoneinfoFile.createNewFile();}
 			if(!wifiFile.exists()){wifiFile.createNewFile();}
@@ -224,6 +235,12 @@ public class SensorRecord extends Activity
 			if(!pressFile.exists()){pressFile.createNewFile();}
 			if(!proxFile.exists()){proxFile.createNewFile();}
 			if(!laccFile.exists()){laccFile.createNewFile();}
+			
+			if(!voiceFile.exists()){voiceFile.createNewFile();}
+			if(!stillFile.exists()){stillFile.createNewFile();}
+			if(!moveFile.exists()){moveFile.createNewFile();}
+			if(!logFile.exists()){logFile.createNewFile();}
+			
 			mPhoneinfoBW = new BufferedWriter(new FileWriter(phoneinfoFile));
 			mWifiBW = new BufferedWriter(new FileWriter(wifiFile));
 			mGpsBW = new BufferedWriter(new FileWriter(gpsFile));
@@ -240,6 +257,7 @@ public class SensorRecord extends Activity
 			mVoiceBW = new BufferedWriter(new FileWriter(voiceFile));
 			mStillBW = new BufferedWriter(new FileWriter(stillFile));
 			mMoveBW = new BufferedWriter(new FileWriter(moveFile));
+			mLogBW = new BufferedWriter(new FileWriter(logFile));
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -261,9 +279,20 @@ public class SensorRecord extends Activity
 	public void moveRecord(View v)
 	{
 		try{
+			Log.d(TAG, "moveRecode---start record");
+			mLogBW.write("moveRecode---start record"+"\n");
 			mMoveBW.write(System.currentTimeMillis()+"\n");
+			Log.d(TAG, "moveRecode---finish record"+System.currentTimeMillis());
+			mLogBW.write("moveRecode---finish record"+"\n");
 		}catch(Exception e)
 		{
+			Log.d(TAG, "moveRecode---record error");
+			try{
+				mLogBW.write("moveRecode---record error"+"\n");
+			}catch(Exception e1){
+				e1.printStackTrace();
+			}
+			
 			Toast.makeText(SensorRecord.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
 		}
 		
@@ -274,11 +303,29 @@ public class SensorRecord extends Activity
 		try{
 			if(stillBtn.isChecked())
 			{
+				Log.d(TAG, "stillRecord---start record");
+				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
+				mStillBW.flush();
+				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
+				mLogBW.write("stillRecord---finish record"+"\n");
 			}else{
+				Log.d(TAG, "stillRecord---start record");
+				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
+				mStillBW.flush();
+				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
+				mLogBW.write("stillRecord---finish record"+"\n");
 			}
 		} catch(Exception e){
+			Log.d(TAG, "stillRecord---record error");
+			try{
+				mLogBW.write("stillRecord---record error"+"\n");
+			}catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			
 			Toast.makeText(SensorRecord.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
 		}
 	}
@@ -313,6 +360,7 @@ public class SensorRecord extends Activity
 			mVoiceBW.flush();
 			mStillBW.flush();
 			mMoveBW.flush();
+			mLogBW.flush();
 
 			mWifiBW.close();
 			mGpsBW.close();
@@ -328,8 +376,20 @@ public class SensorRecord extends Activity
 			mVoiceBW.close();
 			mStillBW.close();
 			mMoveBW.close();
+			Log.d(TAG, "AllRecorded---finish record");
+			mLogBW.write("AllRecorded---finish record"+"\n");
+			
+			mLogBW.close();
 			Toast.makeText(SensorRecord.this,"All Done",Toast.LENGTH_SHORT).show();
 		}catch(Exception e){
+			Log.d(TAG, "AllRecord---record ERROR");
+			try{
+				mLogBW.write("AllRecord---record ERROR"+"\n");
+				mLogBW.close();
+			}catch(Exception e1){
+				e1.printStackTrace();
+			}
+			
 			Toast.makeText(SensorRecord.this,"Exception",Toast.LENGTH_SHORT).show();
 			e.printStackTrace();
 		}
@@ -509,9 +569,20 @@ public class SensorRecord extends Activity
 
 	void writeAudioDataToFile(){
 		try{
+			Log.d(TAG, "firstvoiceRecord---start record");
+			mLogBW.write("firstvoiceRecord---start record"+"\n");
 			mVoiceBW.write(System.currentTimeMillis()+"\n");
+			Log.d(TAG, "firstvoiceRecord---finish record"+System.currentTimeMillis());
+			mLogBW.write("firstvoiceRecord---finish record"+"\n");
 		}catch(Exception e)
 		{
+			Log.d(TAG, "firstvoiceRecord---record ERROR");
+			try{
+				mLogBW.write("firstvoiceRecord---record ERROR"+"\n");
+			}catch(Exception e1){
+				e1.printStackTrace();
+			}
+			
 			e.printStackTrace();
 		}
 		
@@ -534,7 +605,11 @@ public class SensorRecord extends Activity
 		}
 		try{
 			os.close();
+			Log.d(TAG, "secondvoiceRecord---start record");
+			mLogBW.write("secondvoiceRecord---start record"+"\n");
 			mVoiceBW.write(System.currentTimeMillis()+"\n");
+			Log.d(TAG, "secondvoiceRecord---finish record"+System.currentTimeMillis());
+			mLogBW.write("secondvoiceRecord---finish record"+"\n");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
