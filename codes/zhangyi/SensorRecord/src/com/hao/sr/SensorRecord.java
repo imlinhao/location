@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.location.LocationListener;
 import android.location.Location;
-import android.os.Bundle;
 import android.location.LocationManager;
 import android.content.Intent;
 import android.content.Context;
@@ -77,6 +76,7 @@ public class SensorRecord extends Activity
 	String LACC_FILENAME = "lacc.txt";
 	
 	String JNI_FILENAME = "scanJNI.txt";
+	String GETJNI_FILENAME = "getscanJNI.txt";
 	String VOICETIME_FILENAME="voicetime.txt";
 	String STILLTIME_FILENAME="stilltime.txt";
 	String MOVETIME_FILENAME="movetime.txt";
@@ -87,6 +87,7 @@ public class SensorRecord extends Activity
 	BufferedWriter mStillBW;
 	BufferedWriter mMoveBW;
 	BufferedWriter mLogBW;
+	BufferedWriter mJNIBW;
 	
 	BufferedWriter mPhoneinfoBW;
 	BufferedWriter mWifiBW;
@@ -122,6 +123,7 @@ public class SensorRecord extends Activity
 	StringBuffer mStillSB;
 	StringBuffer mMoveSB;
 	StringBuffer mLogSB;
+	StringBuffer mJNISB;
 	
 	boolean mOrigWifiState;
 	int mGpsNum = 0;
@@ -174,6 +176,7 @@ public class SensorRecord extends Activity
 		mStillSB = new StringBuffer(256);
 		mMoveSB = new StringBuffer(256);
 		mLogSB = new StringBuffer(256);
+		mJNISB = new StringBuffer(256);
 
 		Calendar c = Calendar.getInstance();	
 		mTimeDir = c.get(Calendar.YEAR)+"_"+(c.get(Calendar.MONTH)+1)+"_"
@@ -223,6 +226,7 @@ public class SensorRecord extends Activity
 		File proxFile = new File(mTimePath+"/"+PROX_FILENAME);
 		File laccFile = new File(mTimePath+"/"+LACC_FILENAME);
 		
+		File JNIFile = new File(mTimePath+"/"+JNI_FILENAME);
 		File voiceFile = new File(mTimePath+"/"+VOICETIME_FILENAME);
 		File stillFile = new File(mTimePath+"/"+STILLTIME_FILENAME);
 		File moveFile = new File(mTimePath+"/"+MOVETIME_FILENAME);
@@ -241,6 +245,7 @@ public class SensorRecord extends Activity
 			if(!proxFile.exists()){proxFile.createNewFile();}
 			if(!laccFile.exists()){laccFile.createNewFile();}
 			
+			if(!JNIFile.exists()){JNIFile.createNewFile();}
 			if(!voiceFile.exists()){voiceFile.createNewFile();}
 			if(!stillFile.exists()){stillFile.createNewFile();}
 			if(!moveFile.exists()){moveFile.createNewFile();}
@@ -259,6 +264,7 @@ public class SensorRecord extends Activity
 			mProxBW = new BufferedWriter(new FileWriter(proxFile));
 			mLaccBW = new BufferedWriter(new FileWriter(laccFile));
 			
+			mJNIBW = new BufferedWriter(new FileWriter(JNIFile));
 			mVoiceBW = new BufferedWriter(new FileWriter(voiceFile));
 			mStillBW = new BufferedWriter(new FileWriter(stillFile));
 			mMoveBW = new BufferedWriter(new FileWriter(moveFile));
@@ -371,6 +377,7 @@ public class SensorRecord extends Activity
 			mStillBW.flush();
 			mMoveBW.flush();
 			mLogBW.flush();
+//			mJNIBW.flush();
 
 			mWifiBW.close();
 			mGpsBW.close();
@@ -384,6 +391,7 @@ public class SensorRecord extends Activity
 			mProxBW.close();
 			mLaccBW.close();
 			mVoiceBW.close();
+//			mJNIBW.close();
 			mStillBW.close();
 			mMoveBW.close();
 			Log.d(TAG, "AllRecorded---finish record");
@@ -631,8 +639,58 @@ public class SensorRecord extends Activity
 			
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
-				writeScanJNI();
+				String filePath = mTimePath+"/"+GETJNI_FILENAME;
+				File JNIFile = new File(mTimePath+"/"+JNI_FILENAME);
+				if(!JNIFile.exists()){
+					try {
+						JNIFile.createNewFile();
+					} catch (IOException e) {
+					// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				Process process = null;
+				try {
+					process = Runtime.getRuntime().exec("su");
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				DataOutputStream out = new DataOutputStream(process.getOutputStream());
+				
+
+
+				while(mIsscanJNI){
+					try{
+						mJNIBW = new BufferedWriter(new FileWriter(JNIFile,true));
+						mJNIBW.write("\n"+System.currentTimeMillis()+";");
+						mJNIBW.flush();
+						mJNIBW.close();
+						out.writeBytes("iw dev wlan0 scan freq 2412 2437 2452 >> "+filePath+"\n");
+						out.writeBytes("echo '\n' >> "+filePath+"\n");
+						out.flush();		
+
+					}catch(Exception e){
+						e.printStackTrace();
+					}
+				}
+				
+				try {
+					out.writeBytes("exit\n");
+					out.flush();
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}  
+				try {
+					process.waitFor();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
 			}
 		});
 		mJNIThread.start();
@@ -645,11 +703,11 @@ public class SensorRecord extends Activity
 			Process process = Runtime.getRuntime().exec("su");
 			DataOutputStream out = new DataOutputStream(process.getOutputStream());
 			out.writeBytes("mount -o remount rw /system\n");
-			out.writeBytes("mv /system/file.old /system/file.new\n");
-			out.writeBytes("ls / > /system/ls.txt\n");
-			out.writeBytes("ls / > /sdcard/ls.txt\n");
+			
 			out.writeBytes("iw dev wlan0 scan freq 2412 2437 2452 >> "+filePath+"\n");
-			//out.writeBytes("exit\n");  
+			out.flush();		
+			
+			out.writeBytes("exit\n");  
 			out.flush();
 			process.waitFor();
 		}catch(Exception e){
