@@ -1,2 +1,2 @@
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\AndroidManifest.xml : \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\AndroidManifest.xml \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\AndroidManifest.xml : \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\AndroidManifest.xml \

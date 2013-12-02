@@ -99,8 +99,8 @@ LOCAL_SHARED_LIBRARIES := nl-3 nl-genl-3
 
 LOCAL_LDLIBS := -llog
 
-#include $(BUILD_SHARED_LIBRARY)
-include $(BUILD_EXECUTABLE)
+include $(BUILD_SHARED_LIBRARY)
+#include $(BUILD_EXECUTABLE)
 
 
 #

@@ -1,9 +1,9 @@
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\classes.dex : \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\classes\com\hao\getrssi\BuildConfig.class \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\classes\com\hao\getrssi\GetRssiJNI$1.class \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\classes\com\hao\getrssi\GetRssiJNI.class \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\classes\com\hao\getrssi\R$attr.class \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\classes\com\hao\getrssi\R$layout.class \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\classes\com\hao\getrssi\R$string.class \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\classes\com\hao\getrssi\R.class \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\dexedLibs\annotations-a3b60bc7da3d569fac85ba4700e66402.jar \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\classes.dex : \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\classes\com\hao\scanjni\BuildConfig.class \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\classes\com\hao\scanjni\R$attr.class \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\classes\com\hao\scanjni\R$drawable.class \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\classes\com\hao\scanjni\R$layout.class \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\classes\com\hao\scanjni\R$string.class \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\classes\com\hao\scanjni\R.class \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\classes\com\hao\scanjni\ScanJNI$1.class \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\classes\com\hao\scanjni\ScanJNI.class \

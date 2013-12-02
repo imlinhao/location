@@ -1,7 +1,7 @@
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//obj/local/armeabi/objs-debug/nl-genl-3/./genl/family.o: \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/lib/./genl/family.c \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink-generic.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink-local.h \
+obj/local/armeabi/objs-debug/nl-genl-3/./genl/family.o: \
+ jni/libnl-3-android/lib/./genl/family.c \
+ jni/libnl-3-android/include/netlink-generic.h \
+ jni/libnl-3-android/include/netlink-local.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/stdio.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/sys/cdefs.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -69,7 +69,7 @@ F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//obj/local/ar
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/uio.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/inttypes.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/assert.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/missing_include/search.h \
+ jni/missing_include/search.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/arpa/inet.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/netinet/in.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/in.h \
@@ -78,72 +78,72 @@ F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//obj/local/ar
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/byteorder/swab.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/byteorder/generic.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/in6.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/ipv6.h \
+ jni/libnl-3-android/include/linux/ipv6.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/netinet/in6.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/netdb.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if_arp.h \
+ jni/libnl-3-android/include/linux/if.h \
+ jni/libnl-3-android/include/linux/if_arp.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/netdevice.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if_ether.h \
+ jni/libnl-3-android/include/linux/if_ether.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/if_packet.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/missing_include/linux/ethtool.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/pkt_sched.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/pkt_cls.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/gen_stats.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/ip_mp_alg.h \
+ jni/missing_include/linux/ethtool.h \
+ jni/libnl-3-android/include/linux/pkt_sched.h \
+ jni/libnl-3-android/include/linux/pkt_cls.h \
+ jni/libnl-3-android/include/linux/gen_stats.h \
+ jni/libnl-3-android/include/linux/ip_mp_alg.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/atm.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/atmapi.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/atmsap.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/atmioc.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/asm/ioctl.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/asm-generic/ioctl.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/inetdevice.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/snmp.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/netlink.h \
+ jni/libnl-3-android/include/linux/inetdevice.h \
+ jni/libnl-3-android/include/linux/snmp.h \
+ jni/libnl-3-android/include/netlink/netlink.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/sys/poll.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/poll.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/poll.h \
  D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/asm/poll.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/netlink-compat.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/netlink.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/rtnetlink.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if_link.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if_addr.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/neighbour.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/genetlink.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/netfilter/nfnetlink.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/missing_include/linux/netfilter/nfnetlink_compat.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/generated_include/netlink/version.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/errno.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/types.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/handlers.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/netlink-kernel.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/socket.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/object.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/utils.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/list.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/cache-api.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/cache.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/msg.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/attr.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/addr.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/data.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/tc.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/link.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/object-api.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink-types.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/qdisc.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/rtnl.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/route.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/nexthop.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/missing_include/linux/in_route.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/tc-api.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/genl/genl.h \
- F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/genl/family.h
+ jni/libnl-3-android/include/netlink/netlink-compat.h \
+ jni/libnl-3-android/include/linux/netlink.h \
+ jni/libnl-3-android/include/linux/rtnetlink.h \
+ jni/libnl-3-android/include/linux/if_link.h \
+ jni/libnl-3-android/include/linux/if_addr.h \
+ jni/libnl-3-android/include/linux/neighbour.h \
+ jni/libnl-3-android/include/linux/genetlink.h \
+ jni/libnl-3-android/include/linux/netfilter/nfnetlink.h \
+ jni/missing_include/linux/netfilter/nfnetlink_compat.h \
+ jni/generated_include/netlink/version.h \
+ jni/libnl-3-android/include/netlink/errno.h \
+ jni/libnl-3-android/include/netlink/types.h \
+ jni/libnl-3-android/include/netlink/handlers.h \
+ jni/libnl-3-android/include/netlink/netlink-kernel.h \
+ jni/libnl-3-android/include/netlink/socket.h \
+ jni/libnl-3-android/include/netlink/object.h \
+ jni/libnl-3-android/include/netlink/utils.h \
+ jni/libnl-3-android/include/netlink/list.h \
+ jni/libnl-3-android/include/netlink/cache-api.h \
+ jni/libnl-3-android/include/netlink/cache.h \
+ jni/libnl-3-android/include/netlink/msg.h \
+ jni/libnl-3-android/include/netlink/attr.h \
+ jni/libnl-3-android/include/netlink/addr.h \
+ jni/libnl-3-android/include/netlink/data.h \
+ jni/libnl-3-android/include/netlink/route/tc.h \
+ jni/libnl-3-android/include/netlink/route/link.h \
+ jni/libnl-3-android/include/netlink/object-api.h \
+ jni/libnl-3-android/include/netlink-types.h \
+ jni/libnl-3-android/include/netlink/route/qdisc.h \
+ jni/libnl-3-android/include/netlink/route/rtnl.h \
+ jni/libnl-3-android/include/netlink/route/route.h \
+ jni/libnl-3-android/include/netlink/route/nexthop.h \
+ jni/missing_include/linux/in_route.h \
+ jni/libnl-3-android/include/netlink/route/tc-api.h \
+ jni/libnl-3-android/include/netlink/genl/genl.h \
+ jni/libnl-3-android/include/netlink/genl/family.h
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink-generic.h:
+jni/libnl-3-android/include/netlink-generic.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink-local.h:
+jni/libnl-3-android/include/netlink-local.h:
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/stdio.h:
 
@@ -279,7 +279,7 @@ D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-a
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/assert.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/missing_include/search.h:
+jni/missing_include/search.h:
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/arpa/inet.h:
 
@@ -297,31 +297,31 @@ D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-a
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/in6.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/ipv6.h:
+jni/libnl-3-android/include/linux/ipv6.h:
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/netinet/in6.h:
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/netdb.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if.h:
+jni/libnl-3-android/include/linux/if.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if_arp.h:
+jni/libnl-3-android/include/linux/if_arp.h:
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/netdevice.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if_ether.h:
+jni/libnl-3-android/include/linux/if_ether.h:
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/if_packet.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/missing_include/linux/ethtool.h:
+jni/missing_include/linux/ethtool.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/pkt_sched.h:
+jni/libnl-3-android/include/linux/pkt_sched.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/pkt_cls.h:
+jni/libnl-3-android/include/linux/pkt_cls.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/gen_stats.h:
+jni/libnl-3-android/include/linux/gen_stats.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/ip_mp_alg.h:
+jni/libnl-3-android/include/linux/ip_mp_alg.h:
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/linux/atm.h:
 
@@ -335,11 +335,11 @@ D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-a
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/asm-generic/ioctl.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/inetdevice.h:
+jni/libnl-3-android/include/linux/inetdevice.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/snmp.h:
+jni/libnl-3-android/include/linux/snmp.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/netlink.h:
+jni/libnl-3-android/include/netlink/netlink.h:
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/sys/poll.h:
 
@@ -349,74 +349,74 @@ D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-a
 
 D:/adt-bundle-windows-x86_64-20130917/android-ndk-r9b/platforms/android-5/arch-arm/usr/include/asm/poll.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/netlink-compat.h:
+jni/libnl-3-android/include/netlink/netlink-compat.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/netlink.h:
+jni/libnl-3-android/include/linux/netlink.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/rtnetlink.h:
+jni/libnl-3-android/include/linux/rtnetlink.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if_link.h:
+jni/libnl-3-android/include/linux/if_link.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/if_addr.h:
+jni/libnl-3-android/include/linux/if_addr.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/neighbour.h:
+jni/libnl-3-android/include/linux/neighbour.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/genetlink.h:
+jni/libnl-3-android/include/linux/genetlink.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/linux/netfilter/nfnetlink.h:
+jni/libnl-3-android/include/linux/netfilter/nfnetlink.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/missing_include/linux/netfilter/nfnetlink_compat.h:
+jni/missing_include/linux/netfilter/nfnetlink_compat.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/generated_include/netlink/version.h:
+jni/generated_include/netlink/version.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/errno.h:
+jni/libnl-3-android/include/netlink/errno.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/types.h:
+jni/libnl-3-android/include/netlink/types.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/handlers.h:
+jni/libnl-3-android/include/netlink/handlers.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/netlink-kernel.h:
+jni/libnl-3-android/include/netlink/netlink-kernel.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/socket.h:
+jni/libnl-3-android/include/netlink/socket.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/object.h:
+jni/libnl-3-android/include/netlink/object.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/utils.h:
+jni/libnl-3-android/include/netlink/utils.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/list.h:
+jni/libnl-3-android/include/netlink/list.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/cache-api.h:
+jni/libnl-3-android/include/netlink/cache-api.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/cache.h:
+jni/libnl-3-android/include/netlink/cache.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/msg.h:
+jni/libnl-3-android/include/netlink/msg.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/attr.h:
+jni/libnl-3-android/include/netlink/attr.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/addr.h:
+jni/libnl-3-android/include/netlink/addr.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/data.h:
+jni/libnl-3-android/include/netlink/data.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/tc.h:
+jni/libnl-3-android/include/netlink/route/tc.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/link.h:
+jni/libnl-3-android/include/netlink/route/link.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/object-api.h:
+jni/libnl-3-android/include/netlink/object-api.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink-types.h:
+jni/libnl-3-android/include/netlink-types.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/qdisc.h:
+jni/libnl-3-android/include/netlink/route/qdisc.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/rtnl.h:
+jni/libnl-3-android/include/netlink/route/rtnl.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/route.h:
+jni/libnl-3-android/include/netlink/route/route.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/nexthop.h:
+jni/libnl-3-android/include/netlink/route/nexthop.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/missing_include/linux/in_route.h:
+jni/missing_include/linux/in_route.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/route/tc-api.h:
+jni/libnl-3-android/include/netlink/route/tc-api.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/genl/genl.h:
+jni/libnl-3-android/include/netlink/genl/genl.h:
 
-F:/Users/hao/Desktop/location/wifi_location/getrssi_jni/GetRssiJNI//jni/libnl-3-android/include/netlink/genl/family.h:
+jni/libnl-3-android/include/netlink/genl/family.h:

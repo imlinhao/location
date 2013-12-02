@@ -1,4 +1,12 @@
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\gen\com\hao\getrssi\R.java \
- : F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\res\layout\main.xml \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\res\values\strings.xml \
-F:\Users\hao\Desktop\location\wifi_location\getrssi_jni\GetRssiJNI\bin\AndroidManifest.xml \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\gen\com\hao\scanjni\R.java \
+ : C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\res\drawable-hdpi\ic_launcher.png \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\res\drawable-ldpi\ic_launcher.png \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\res\drawable-mdpi\ic_launcher.png \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\res\drawable-xhdpi\ic_launcher.png \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\res\layout\main.xml \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\res\values\strings.xml \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\res\drawable-hdpi\ic_launcher.png \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\res\drawable-ldpi\ic_launcher.png \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\res\drawable-mdpi\ic_launcher.png \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\res\drawable-xhdpi\ic_launcher.png \
+C:\Users\dell\Desktop\location\codes\linhao\ScanJNI\bin\AndroidManifest.xml \
