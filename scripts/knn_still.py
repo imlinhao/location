@@ -1,12 +1,13 @@
 import re
 import math
-DATA_ROOT = "../datasets/fingerprint_db/liang_mi"
-STILLTIME_FN = DATA_ROOT+"/2013_10_26_20_22_9/stilltime.txt"
-DB_FN = DATA_ROOT+"/2013_10_26_20_22_9/wifi.txt"
-ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_10_26_20_33_22/stilltime.txt"
-QUERY_FN = DATA_ROOT+"/2013_10_26_20_33_22/wifi.txt"
-loc_list = [1,2,3,4,5]
-ap_list = ['ACM,f4:ec:38:2e:6f:ac','minruigao-PC-68140,4c:eb:42:6d:af:84','TP-LINK_534E20,78:a1:06:53:4e:20','hi_Camp,d8:5d:4c:1b:90:6a']
+DATA_ROOT = "../datasets/fingerprint_db/hao_nexus7"
+STILLTIME_FN = DATA_ROOT+"/2013_11_29_21_26_4_offline/stilltime.txt"
+DB_FN = DATA_ROOT+"/2013_11_29_21_26_4_offline/wifi.txt"
+ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_11_29_21_26_4_online/stilltime.txt"
+QUERY_FN = DATA_ROOT+"/2013_11_29_21_26_4_online/wifi.txt"
+#loc_list = [1,2,3,4,5]
+loc_list = range(0,51)
+ap_list = ['ACM,f4:ec:38:2e:6f:ac','TP-LINK_534E20,78:a1:06:53:4e:20','hi_Camp,d8:5d:4c:1b:90:6a','AirJ,74:25:8a:47:3a:70']
 
 stilltime_list = []
 f_stilltime = open(STILLTIME_FN)
@@ -36,7 +37,7 @@ while True:
 	dump_loc_list.append(loc_list[loc_index])
 	db_entry = []
 	for ap in ap_list:
-		rssi_search = re.search(ap+",(-\d+?);",line)
+		rssi_search = re.search(ap+".*?,(-\d+?);",line)
 		if rssi_search:
 			db_entry.append(int(rssi_search.group(1)))
 		else:
@@ -46,8 +47,8 @@ f_db.close()
 
 #print(len(dump_loc_list))
 #print(len(dump_loc_list))
-#print(dump_loc_list)
-#print(db_list)
+print(dump_loc_list)
+print(db_list)
 
 online_stilltime_list = []
 f_online_stilltime = open(ONLINE_STILLTIME_FN)

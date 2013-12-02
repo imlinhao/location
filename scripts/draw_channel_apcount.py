@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 channel_aplist_dict = {'2412':[],'2417':[],'2422':[],'2427':[],'2432':[],'2437':[],'2442':[],'2447':[],'2452':[],'2457':[],'2462':[], '2467':[], '2472':[], '2484':[]}
 
 #need to delete last line for the error partial record
-INPUT_FILENAME = "../datasets/wardriving/"+"bao_coolpad/2013_10_27_13_45_50/wifi.txt"
+INPUT_FILENAME = "../datasets/wardriving/"+"bao_coolpad/wifi_2teach.txt"
+#INPUT_FILENAME="../datasets/fingerprint_db/liang_mi/2013_10_26_20_22_9/wifi.txt"
 f = open(INPUT_FILENAME)
 while True:
 	line = f.readline()
@@ -20,7 +21,7 @@ channel_apcount_dict = {}
 for channel in channel_aplist_dict.keys():
 	channel_apcount_dict[channel] = len(channel_aplist_dict[channel])
 
-#print(channel_aplist_dict)
+print(channel_aplist_dict)
 print(channel_apcount_dict)
 
 f.close()
