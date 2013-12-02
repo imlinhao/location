@@ -25,6 +25,7 @@ import android.media.MediaRecorder;
 import java.io.FileOutputStream;
 import android.os.Environment;
 import java.util.Calendar;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -34,6 +35,7 @@ import android.os.PowerManager;
 import android.content.BroadcastReceiver;
 import android.os.Build;
 import android.net.wifi.ScanResult;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import java.util.List;
 import android.annotation.TargetApi;
@@ -48,7 +50,9 @@ public class SensorRecord extends Activity
 	static final int AUDIO_ENCODING = AudioFormat.ENCODING_PCM_16BIT;
 	AudioRecord mRecorder;
 	Thread mRecordingThread;
+	Thread mJNIThread;
 	boolean mIsRecording = false;
+	boolean mIsscanJNI = false;
 	LocationManager mLocationManager;
 	LocationListener mLocationListener = new MyLocationListener();
 	SensorManager mSensorManager;
@@ -72,6 +76,7 @@ public class SensorRecord extends Activity
 	String PROX_FILENAME = "prox.txt";
 	String LACC_FILENAME = "lacc.txt";
 	
+	String JNI_FILENAME = "scanJNI.txt";
 	String VOICETIME_FILENAME="voicetime.txt";
 	String STILLTIME_FILENAME="stilltime.txt";
 	String MOVETIME_FILENAME="movetime.txt";
@@ -148,7 +153,7 @@ public class SensorRecord extends Activity
 			public void onReceive(Context context, Intent intent){
 				if(mIsScanning){
 					saveScanResults();
-					mWifiManager.startScan();
+//					mWifiManager.startScan();
 				}
 			}
 		};
@@ -263,8 +268,11 @@ public class SensorRecord extends Activity
 		}
 
 		try{
+			WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);  
+	        WifiInfo info = wifi.getConnectionInfo();
+	        String phonemac = info.getMacAddress();
 			StringBuffer phoneinfoSB = new StringBuffer(256);
-			phoneinfoSB.append("VERSION.SDK_INT:").append(Build.VERSION.SDK_INT).append("\nMANUFACTUERE:").append(Build.MANUFACTURER).append("\nMODEL:").append(Build.MODEL).append("\nPRODUCT:").append(Build.PRODUCT).append("\nDEVICE:").append(Build.DEVICE).append("\nCPU_ABI:").append(Build.CPU_ABI).append("\nCPU_ABI2:").append(Build.CPU_ABI2);
+			phoneinfoSB.append("VERSION.SDK_INT:").append(Build.VERSION.SDK_INT).append("\nMANUFACTUERE:").append(Build.MANUFACTURER).append("\nMODEL:").append(Build.MODEL).append("\nPRODUCT:").append(Build.PRODUCT).append("\nDEVICE:").append(Build.DEVICE).append("\nCPU_ABI:").append(Build.CPU_ABI).append("\nCPU_ABI2:").append(Build.CPU_ABI2).append("\nMACINFO:").append(phonemac);
 			mPhoneinfoBW.write(phoneinfoSB.toString());
 			mPhoneinfoBW.flush();
 			mPhoneinfoBW.close();
@@ -272,8 +280,10 @@ public class SensorRecord extends Activity
 		}
 
 		mIsScanning = true;
-		mWifiManager.startScan();
+//		mWifiManager.startScan();
 		startRecording();
+		
+		scanJNI();
     }
 
 	public void moveRecord(View v)
@@ -282,7 +292,6 @@ public class SensorRecord extends Activity
 			Log.d(TAG, "moveRecode---start record");
 			mLogBW.write("moveRecode---start record"+"\n");
 			mMoveBW.write(System.currentTimeMillis()+"\n");
-			mMoveBW.flush();
 			Log.d(TAG, "moveRecode---finish record"+System.currentTimeMillis());
 			mLogBW.write("moveRecode---finish record"+"\n");
 		}catch(Exception e)
@@ -307,14 +316,12 @@ public class SensorRecord extends Activity
 				Log.d(TAG, "stillRecord---start record");
 				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
-				mStillBW.flush();
 				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
 				mLogBW.write("stillRecord---finish record"+"\n");
 			}else{
 				Log.d(TAG, "stillRecord---start record");
 				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
-				mStillBW.flush();
 				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
 				mLogBW.write("stillRecord---finish record"+"\n");
 			}
@@ -333,6 +340,8 @@ public class SensorRecord extends Activity
 	@Override
 	public void onDestroy(){
 		mIsScanning = false;
+		mIsscanJNI = false;
+		mJNIThread = null;
 		unregisterReceiver(mReceiver);
 		mWakeLock.release();
 		mWifiManager.setWifiEnabled(mOrigWifiState);
@@ -609,7 +618,6 @@ public class SensorRecord extends Activity
 			Log.d(TAG, "secondvoiceRecord---start record");
 			mLogBW.write("secondvoiceRecord---start record"+"\n");
 			mVoiceBW.write(System.currentTimeMillis()+"\n");
-			mVoiceBW.flush();
 			Log.d(TAG, "secondvoiceRecord---finish record"+System.currentTimeMillis());
 			mLogBW.write("secondvoiceRecord---finish record"+"\n");
 		}catch(Exception e){
@@ -617,6 +625,38 @@ public class SensorRecord extends Activity
 		}
 	}
 
+	void scanJNI(){
+		mIsscanJNI = true;
+		mJNIThread = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				writeScanJNI();
+			}
+		});
+		mJNIThread.start();
+		
+	}
+	
+	void writeScanJNI(){
+		String filePath = mTimePath+"/"+JNI_FILENAME;
+		try{ 
+			Process process = Runtime.getRuntime().exec("su");
+			DataOutputStream out = new DataOutputStream(process.getOutputStream());
+			out.writeBytes("mount -o remount rw /system\n");
+			out.writeBytes("mv /system/file.old /system/file.new\n");
+			out.writeBytes("ls / > /system/ls.txt\n");
+			out.writeBytes("ls / > /sdcard/ls.txt\n");
+			out.writeBytes("iw dev wlan0 scan freq 2412 2437 2452 >> "+filePath+"\n");
+			//out.writeBytes("exit\n");  
+			out.flush();
+			process.waitFor();
+		}catch(Exception e){
+			Toast.makeText(getApplicationContext(), "出问题了", Toast.LENGTH_LONG).show();
+		}
+	}
+	
 	@TargetApi(17)
 	public void saveScanResults(){
 		List<ScanResult> scanResults = mWifiManager.getScanResults();
