@@ -29,7 +29,7 @@ public class ScanJNI extends Activity
 			out.writeBytes("mv /system/file.old /system/file.new\n");
 			out.writeBytes("ls / > /system/ls.txt\n");
 			out.writeBytes("ls / > /sdcard/ls.txt\n");
-			//out.writeBytes("hao > /sdcard/haoscan.txt\n");
+			//out.writeBytes("hao > /sdcard/haoscan.txt\n  iw dev wlan0 freq 2412 2437 2452 >> /sdcard");
 			out.writeBytes("exit\n");  
 			out.flush();
 			process.waitFor();
