@@ -1,4 +1,4 @@
-package com.hao.sr;
+package com.wifi.fsensorrecord;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -37,12 +37,11 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import java.util.List;
+
 import android.annotation.TargetApi;
 import android.widget.TextView;
-
-public class SensorRecord extends Activity
-{
-	private static final String  TAG = "WRITE_TO_SDCARD----->";
+public class MainActivity extends Activity {
+private static final String  TAG = "WRITE_TO_SDCARD----->";
 	
 	static final int SAMPLERATE = 8000;
 	static final int CHANNELS = AudioFormat.CHANNEL_IN_MONO;
@@ -58,7 +57,7 @@ public class SensorRecord extends Activity
 	SensorEventListener mSensorEventListener = new MySensorEventListener();
 	Sensor mAcc, mMf, mGyro, mHum, mTemp, mLight, mPress, mProx, mLacc;
 	String mSdcardPath;
-	String DATADIR = "sensorrecord";
+	String DATADIR = "sensorrecordNoRoot";
 	String mTimeDir;
 	String mTimePath;
 	String AUDIO_FILENAME = "voice8k16bitmono.pcm"; //new file in the record thread
@@ -137,8 +136,8 @@ public class SensorRecord extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-		tvGps = (TextView) findViewById(R.id.tvGps);
+        setContentView(R.layout.activity_main);
+		tvGps = (TextView)findViewById(R.id.tvGps);
 		moveBtn = (Button) findViewById(R.id.btn);
 		stillBtn = (ToggleButton) findViewById(R.id.togbtn);
 		
@@ -155,7 +154,7 @@ public class SensorRecord extends Activity
 			public void onReceive(Context context, Intent intent){
 				if(mIsScanning){
 					saveScanResults();
-//					mWifiManager.startScan();
+					mWifiManager.startScan();
 				}
 			}
 		};
@@ -185,7 +184,7 @@ public class SensorRecord extends Activity
 		if(Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
 			mSdcardPath = Environment.getExternalStorageDirectory().getAbsolutePath();
 		}else{
-			Toast.makeText(SensorRecord.this,"Please insert SDCARD",Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this,"Please insert SDCARD",Toast.LENGTH_SHORT).show();
 			mSdcardPath = "/sdcard"; //TODO:need more good way to handle sdcard exception
 		}
 		mTimePath = mSdcardPath+"/"+DATADIR+"/"+mTimeDir;
@@ -286,10 +285,10 @@ public class SensorRecord extends Activity
 		}
 
 		mIsScanning = true;
-//		mWifiManager.startScan();
+		mWifiManager.startScan();
 		startRecording();
 		
-		scanJNI();
+//		scanJNI();
     }
 
 	public void moveRecord(View v)
@@ -298,7 +297,6 @@ public class SensorRecord extends Activity
 			Log.d(TAG, "moveRecode---start record");
 			mLogBW.write("moveRecode---start record"+"\n");
 			mMoveBW.write(System.currentTimeMillis()+"\n");
-			mMoveBW.flush();
 			Log.d(TAG, "moveRecode---finish record"+System.currentTimeMillis());
 			mLogBW.write("moveRecode---finish record"+"\n");
 		}catch(Exception e)
@@ -310,7 +308,7 @@ public class SensorRecord extends Activity
 				e1.printStackTrace();
 			}
 			
-			Toast.makeText(SensorRecord.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
 		}
 		
 	}
@@ -323,14 +321,12 @@ public class SensorRecord extends Activity
 				Log.d(TAG, "stillRecord---start record");
 				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
-				mStillBW.flush();
 				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
 				mLogBW.write("stillRecord---finish record"+"\n");
 			}else{
 				Log.d(TAG, "stillRecord---start record");
 				mLogBW.write("stillRecord---start record"+"\n");
 				mStillBW.write(System.currentTimeMillis()+"\n");
-				mStillBW.flush();
 				Log.d(TAG, "stillRecord---finish record"+System.currentTimeMillis());
 				mLogBW.write("stillRecord---finish record"+"\n");
 			}
@@ -343,7 +339,7 @@ public class SensorRecord extends Activity
 				e1.printStackTrace();
 			}
 			
-			Toast.makeText(SensorRecord.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this,"StillRecord Error",Toast.LENGTH_SHORT).show();
 		}
 	}
 	@Override
@@ -401,7 +397,7 @@ public class SensorRecord extends Activity
 			mLogBW.write("AllRecorded---finish record"+"\n");
 			
 			mLogBW.close();
-			Toast.makeText(SensorRecord.this,"All Done",Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this,"All Done",Toast.LENGTH_SHORT).show();
 		}catch(Exception e){
 			Log.d(TAG, "AllRecord---record ERROR");
 			try{
@@ -411,7 +407,7 @@ public class SensorRecord extends Activity
 				e1.printStackTrace();
 			}
 			
-			Toast.makeText(SensorRecord.this,"Exception",Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this,"Exception",Toast.LENGTH_SHORT).show();
 			e.printStackTrace();
 		}
 		
@@ -440,7 +436,7 @@ public class SensorRecord extends Activity
 
 		@Override
 		public void onProviderDisabled(String provider){
-			Toast.makeText(SensorRecord.this,"Please open GPS",Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this,"Please open GPS",Toast.LENGTH_SHORT).show();
 			Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
 			startActivity(intent);
 		}
@@ -593,7 +589,6 @@ public class SensorRecord extends Activity
 			Log.d(TAG, "firstvoiceRecord---start record");
 			mLogBW.write("firstvoiceRecord---start record"+"\n");
 			mVoiceBW.write(System.currentTimeMillis()+"\n");
-			mVoiceBW.flush();
 			Log.d(TAG, "firstvoiceRecord---finish record"+System.currentTimeMillis());
 			mLogBW.write("firstvoiceRecord---finish record"+"\n");
 		}catch(Exception e)
@@ -637,65 +632,6 @@ public class SensorRecord extends Activity
 		}
 	}
 
-	void scanJNI(){
-		mIsscanJNI = true;
-		mJNIThread = new Thread(new Runnable() {
-			
-			@Override
-			public void run() {
-				String filePath = mTimePath+"/"+GETJNI_FILENAME;
-				File JNIFile = new File(mTimePath+"/"+JNI_FILENAME);
-				if(!JNIFile.exists()){
-					try {
-						JNIFile.createNewFile();
-					} catch (IOException e) {
-					// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				Process process = null;
-				try {
-					process = Runtime.getRuntime().exec("su");
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				DataOutputStream out = new DataOutputStream(process.getOutputStream());
-				
-
-
-				while(mIsscanJNI){
-					try{
-						out.writeBytes("iw dev wlan0 scan freq 2412 2437 2452 >> "+filePath+"\n");
-						out.writeBytes("echo '\n' >> "+filePath+"\n");
-						out.flush();		
-
-					}catch(Exception e){
-						e.printStackTrace();
-					}
-				}
-				
-				try {
-					out.writeBytes("exit\n");
-					out.flush();
-					
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}  
-				try {
-					process.waitFor();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				
-			}
-		});
-		mJNIThread.start();
-		
-	}
 	
 	@TargetApi(17)
 	public void saveScanResults(){
