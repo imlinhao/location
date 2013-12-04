@@ -1,14 +1,17 @@
 import re
+import matplotlib.pyplot as plt
+import numpy as np
 import math
-DATA_ROOT = "../datasets/fingerprint_db/hao_nexus7"
-STILLTIME_FN = DATA_ROOT+"/2013_11_29_21_26_4_offline/stilltime.txt"
-DB_FN = DATA_ROOT+"/2013_11_29_21_26_4_offline/wifi.txt"
-ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_11_29_21_26_4_online/stilltime.txt"
-QUERY_FN = DATA_ROOT+"/2013_11_29_21_26_4_online/wifi.txt"
+DATA_ROOT = "../datasets/fingerprint_db/liang_mi"
+STILLTIME_FN = DATA_ROOT+"/2013_11_29_22_31_31/stilltime.txt"
+DB_FN = DATA_ROOT+"/2013_11_29_22_31_31/wifi.txt"
+ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_11_29_22_6_17/stilltime.txt"
+QUERY_FN = DATA_ROOT+"/2013_11_29_22_6_17/wifi.txt"
+
 #loc_list = [1,2,3,4,5]
 loc_list = range(0,51)
-ap_list = ['ACM,f4:ec:38:2e:6f:ac','TP-LINK_534E20,78:a1:06:53:4e:20','hi_Camp,d8:5d:4c:1b:90:6a','AirJ,74:25:8a:47:3a:70']
-
+#ap_list = ['AirJ,74:25:8a:47:39:30', 'AirJ,74:25:8a:47:3b:50', 'AirJ,74:25:8a:56:80:70']
+ap_list = ['AirJ,74:25:8a:47:39:30', 'AirJ,74:25:8a:47:3b:50', 'AirJ,74:25:8a:56:80:70']
 stilltime_list = []
 f_stilltime = open(STILLTIME_FN)
 while True:
@@ -66,6 +69,7 @@ def distance(query_entry, db_entry):
 
 locindex = 0
 query_list = []
+err_distance_list = []
 f_query = open(QUERY_FN)
 while True:
 	distance_list = []
@@ -85,12 +89,24 @@ while True:
 			distance_list.append(distance(db_entry,query_entry))
 		cal_loc = dump_loc_list[distance_list.index(min(distance_list))]
 		real_loc = loc_list[locindex]
-		print("cal loc: %d" % cal_loc)
-		print("real loc:%d" % real_loc)
-		print("distance:%d" % abs(cal_loc-real_loc))
-		print("rssi distance:%d" % min(distance_list))
+		err_distance_list.append(abs(cal_loc-real_loc))
+		#print("cal loc: %d" % cal_loc)
+		#print("real loc:%d" % real_loc)
+		#print("distance:%d" % abs(cal_loc-real_loc))
+		#print("rssi distance:%d" % min(distance_list))
 
 		locindex += 1
 		if(len(loc_list)==locindex): break
 f_query.close()
+zero_count = err_distance_list.count(0)
+print(zero_count)
+zero_count_percentage = zero_count*1.0/len(err_distance_list)
+bins=np.linspace(0,10,11)
+hist,bin_edges = np.histogram(err_distance_list,bins=bins)
+print(hist)
+pdf = 1.0*hist/len(err_distance_list)
+cdf = np.cumsum(pdf)
+print(cdf)
+plt.plot(bins,np.append([zero_count_percentage],cdf),'r*-')
+plt.show();
 
