@@ -69,12 +69,12 @@ def construct_3channel_db(filename, stilltime_list):
 	while True:
 		line = db_file.readline()
 		if not line : break
-		time = 1000*float(re.search("^(\d*.\d*);",line).group(1))
+		time = int(re.search("^(\d*);",line).group(1))
 		loc_index = search_locindex(time,stilltime_list)
 		if(loc_index<0): continue
 		if(loc_index==prev_loc_index):
 			for freq in ["2412","2437","2462"]:
-				ap_rssi_all = re.findall(freq+',(..:..:..:..:..:..),.*?(-\d*);',line)
+				ap_rssi_all = re.findall(freq+',.*?,(..:..:..:..:..:..),.*?(-\d*);',line)
 				for ap,rssi in ap_rssi_all:
 					if(ap not in ap_rssilist_dict.keys()): ap_rssilist_dict[ap] = [int(rssi)]
 					else: ap_rssilist_dict[ap].append(int(rssi))
@@ -211,7 +211,7 @@ def plt_cdf(err_distance_list, color_style, label):
 	print(zero_count)
 	zero_count_percentage = zero_count*1.0/len(err_distance_list)
 	#bins=np.linspace(0,12,13)+0.001 #plus 0.001 to include 1 meter in [0.001,1.001)
-	bins=np.linspace(0,12,20) #plus 0.001 to include 1 meter in [0.001,1.001)
+	bins=np.linspace(0,30,40) #plus 0.001 to include 1 meter in [0.001,1.001)
 	hist,bin_edges = np.histogram(err_distance_list,bins=bins)
 	print(hist)
 	pdf = 1.0*hist/len(err_distance_list)
@@ -235,8 +235,6 @@ if __name__ == '__main__':
 	THREECHANNEL_ONLINE_MOVETIME_FN = DATA_ROOT+"/2013_12_4_21_37_52/movetime.txt"
 	THREECHANNEL_ONLINE_MOVE_QUERY_FN = DATA_ROOT+"/2013_12_4_21_37_52/getscanJNI.txt"
 
-
-
 	#DATA_ROOT = "../datasets/fingerprint_db/zhang_mi"
 	#OFFLINE_STILLTIME_FN = DATA_ROOT+"/2013_12_4_21_42_15/stilltime.txt" 
 	#OFFLINE_DB_FN = DATA_ROOT+"/2013_12_4_21_42_15/wifi.txt"
@@ -246,10 +244,11 @@ if __name__ == '__main__':
 	#ALLCHANNEL_ONLINE_MOVETIME_FN = DATA_ROOT+"/2013_12_4_21_57_15/movetime.txt"
 	#ALLCHANNEL_ONLINE_MOVE_QUERY_FN = DATA_ROOT+"/2013_12_4_21_57_15/wifi.txt"
 
-	#THREECHANNEL_ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_12_4_21_19_38/stilltime.txt"
-	#THREECHANNEL_ONLINE_STILL_QUERY_FN = DATA_ROOT+"/2013_12_4_21_19_38/getscanJNI.txt"
-	#THREECHANNEL_ONLINE_MOVETIME_FN = DATA_ROOT+"/2013_12_4_21_37_53/movetime.txt"
-	#THREECHANNEL_ONLINE_MOVE_QUERY_FN = DATA_ROOT+"/2013_12_4_21_37_53/getscanJNI.txt"
+	#THREECHANNEL_ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_12_5_12_21_37/stilltime.txt"
+	#THREECHANNEL_ONLINE_STILL_QUERY_FN = DATA_ROOT+"/2013_12_5_12_21_37/getscanJNI.txt"
+	#THREECHANNEL_ONLINE_MOVETIME_FN = DATA_ROOT+"/2013_12_5_12_36_5/movetime.txt"
+	#THREECHANNEL_ONLINE_MOVE_QUERY_FN = DATA_ROOT+"/2013_12_5_12_36_5/getscanJNI.txt"
+
 	loc_list = range(0,51)
 
 	fig, ax = plt.subplots()
@@ -272,16 +271,16 @@ if __name__ == '__main__':
 	offline_stilltime_list = get_stilltime_list(OFFLINE_STILLTIME_FN)
 	threechannel_db = construct_3channel_db(OFFLINE_DB_FN, offline_stilltime_list)
 	threechannel_online_stilltime_list = get_stilltime_list(THREECHANNEL_ONLINE_STILLTIME_FN)
-	threechannel_query_list = get_3channel_still_query_list(THREECHANNEL_ONLINE_STILL_QUERY_FN, threechannel_online_stilltime_list, loc_list)
-	threechannel_err_distance_list = get_err_distance_list(threechannel_query_list, threechannel_db)
-	plt_cdf(threechannel_err_distance_list, color_style[2], label="three channel still")
+	threechannel_online_still_query_list = get_3channel_still_query_list(THREECHANNEL_ONLINE_STILL_QUERY_FN, threechannel_online_stilltime_list, loc_list)
+	threechannel_still_err_distance_list = get_err_distance_list(threechannel_online_still_query_list, threechannel_db)
+	plt_cdf(threechannel_still_err_distance_list, color_style[2], label="three channel still")
 
 	offline_stilltime_list = get_stilltime_list(OFFLINE_STILLTIME_FN)
 	threechannel_db = construct_3channel_db(OFFLINE_DB_FN, offline_stilltime_list)
 	threechannel_online_movetime_list = get_movetime_list(THREECHANNEL_ONLINE_MOVETIME_FN)
-	threechannel_query_list = get_3channel_move_query_list(THREECHANNEL_ONLINE_MOVE_QUERY_FN, threechannel_online_movetime_list, loc_list)
-	threechannel_err_distance_list = get_err_distance_list(threechannel_query_list, threechannel_db)
-	plt_cdf(threechannel_err_distance_list, color_style[3], label="three channel move")
+	threechannel_online_move_query_list = get_3channel_move_query_list(THREECHANNEL_ONLINE_MOVE_QUERY_FN, threechannel_online_movetime_list, loc_list)
+	threechannel_move_err_distance_list = get_err_distance_list(threechannel_online_move_query_list, threechannel_db)
+	plt_cdf(threechannel_move_err_distance_list, color_style[3], label="three channel move")
 
 	plt.legend()
 	ax.set_xlim(0,12)
