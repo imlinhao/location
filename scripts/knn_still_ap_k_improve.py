@@ -8,17 +8,17 @@ import numpy as np
 
 font = FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=14) 
 
-#DATA_ROOT = "../datasets/fingerprint_db/hao_nexus7"
-#STILLTIME_FN = DATA_ROOT+"/2013_11_29_21_26_4_offline/stilltime.txt"
-#DB_FN = DATA_ROOT+"/2013_11_29_21_26_4_offline/wifi.txt"
-#ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_11_29_21_26_4_online/stilltime.txt"
-#QUERY_FN = DATA_ROOT+"/2013_11_29_21_26_4_online/wifi.txt"
+DATA_ROOT = "../datasets/fingerprint_db/hao_nexus7"
+STILLTIME_FN = DATA_ROOT+"/2013_11_29_21_26_4_offline/stilltime.txt"
+DB_FN = DATA_ROOT+"/2013_11_29_21_26_4_offline/wifi.txt"
+ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_11_29_21_26_4_online/stilltime.txt"
+QUERY_FN = DATA_ROOT+"/2013_11_29_21_26_4_online/wifi.txt"
 
-DATA_ROOT = "../datasets/fingerprint_db/liang_mi"
-STILLTIME_FN = DATA_ROOT+"/2013_11_29_22_31_31/stilltime.txt"
-DB_FN = DATA_ROOT+"/2013_11_29_22_31_31/wifi.txt"
-ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_11_29_22_6_17/stilltime.txt"
-QUERY_FN = DATA_ROOT+"/2013_11_29_22_6_17/wifi.txt"
+#DATA_ROOT = "../datasets/fingerprint_db/liang_mi"
+#STILLTIME_FN = DATA_ROOT+"/2013_11_29_22_31_31/stilltime.txt"
+#DB_FN = DATA_ROOT+"/2013_11_29_22_31_31/wifi.txt"
+#ONLINE_STILLTIME_FN = DATA_ROOT+"/2013_11_29_22_6_17/stilltime.txt"
+#QUERY_FN = DATA_ROOT+"/2013_11_29_22_6_17/wifi.txt"
 
 stilltime_list = []
 f_stilltime = open(STILLTIME_FN)
@@ -147,7 +147,7 @@ while True:
 				else: db_entry_add_otherchannel_ap_rssilist[ap].append(int(rssi))
 	else: 
 		#print(line)
-		print(db_entry_2_ap_rssilist);print(db_entry_add_otherchannel_ap_rssilist)
+		#print(db_entry_2_ap_rssilist);print(db_entry_add_otherchannel_ap_rssilist)
 		prev_loc_index=loc_index
 		for ap in db_entry_2_ap_rssilist.keys():
 			db_entry_2[ap] = [np.mean(db_entry_2_ap_rssilist[ap]),np.std(db_entry_2_ap_rssilist[ap])]
@@ -172,8 +172,8 @@ db_entry_2_ap_rssilist = {}
 db_entry_add_otherchannel_ap_rssilist = {}
 f_db.close()
 #print(dump_loc_list)
-print(db_list_2)
-print(db_list_add_otherchannel)
+#print(db_list_2)
+#print(db_list_add_otherchannel)
 
 online_stilltime_list = []
 f_online_stilltime = open(ONLINE_STILLTIME_FN)
@@ -220,8 +220,8 @@ while True:
 		locindex += 1
 		if(len(loc_list)==locindex): break
 f_query.close()
-print(query_list_2)
-print(query_list_add_otherchannel)
+#print(query_list_2)
+#print(query_list_add_otherchannel)
 
 fig, ax = plt.subplots()
 color_style = ["r*-","g+-","bo-","k*--","r+--","go--","b*-."]

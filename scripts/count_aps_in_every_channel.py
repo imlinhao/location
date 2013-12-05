@@ -24,7 +24,12 @@ while True:
 	all_channel_count = sum(count_in_fp_list)
 	all_channel_count_list.append(all_channel_count)
 	#if(three_channel_count<4 and all_channel_count>=4):
+	#TODO:DEBUG:three_channel_count should must be less than all_channel_count
 	if(three_channel_count < all_channel_count):
 		print(time);print(three_channel_count);print(all_channel_count)
 f_wifi.close()
+
+print(all_channel_count_list)
 print(three_channel_count_list)
+print(len(all_channel_count_list))
+print(len(three_channel_count_list))

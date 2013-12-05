@@ -1,7 +1,7 @@
 import re
 
 #WIFI_FILENAME = "../datasets/fingerprint_db/liang_mi/2013_11_29_22_31_31/wifi.txt"
-WIFI_FILENAME = "../datasets/wardriving/bao_coolpad/2013_10_23_11_42_50/wifi.txt"
+WIFI_FILENAME = "../datasets/wardriving/bao_coolpad/2013_10_27_13_24_52/wifi.txt"
 channel_list = ['2412','2417','2422','2427','2432','2437','2442','2447','2452','2457','2462','2467','2472','2484']
 time_list = []
 count_list = []
@@ -23,7 +23,11 @@ while True:
 	three_channel_count_list.append(three_channel_count)
 	all_channel_count = sum(count_in_fp_list)
 	all_channel_count_list.append(all_channel_count)
-	if(three_channel_count<4 and all_channel_count>=4):
+	#if(three_channel_count<4 and all_channel_count>=4):
+	if(three_channel_count < all_channel_count):
 		print(time);print(three_channel_count);print(all_channel_count)
 f_wifi.close()
+print(all_channel_count_list)
 print(three_channel_count_list)
+print(len(all_channel_count_list))
+print(len(three_channel_count_list))
