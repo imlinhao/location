@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:24
+-keep class com.wifi.fsensorrecord.MainActivity { <init>(...); }
+
+# onClick res/layout/activity_main.xml #generated:35
+-keepclassmembers class * { *** moveRecord(...); }
+
+# onClick res/layout/activity_main.xml #generated:20
+-keepclassmembers class * { *** stillRecord(...); }
+
