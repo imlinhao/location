@@ -1,0 +1,170 @@
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9)
+entering extended mode
+(C:\Users\dell\Desktop\location\daily_report\linhao\diss.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(C:\Users\dell\Desktop\location\daily_report\linhao\sjtuthesis.cls
+
+LaTeX Warning: You have requested document class `sjtuthesis',
+               but the document class provides `sjtuthesis.cls'.
+
+Document Class: sjtuthesis.cls 2012/12/05 v0.5 sjtuthesis document class
+(C:\CTEX\MiKTeX\tex\latex\ctex\ctexbook.cls
+Document Class: ctexbook 2011/03/11 v1.02c ctexbook document class
+(C:\CTEX\MiKTeX\tex\latex\ctex\opt\ctex-common-opts.def)
+(C:\CTEX\MiKTeX\tex\latex\ctex\opt\ctex-caption-opts.def)
+(C:\CTEX\MiKTeX\tex\latex\ctex\opt\ctex-class-opts.def)
+(C:\CTEX\CTeX\tex\latex\ctex\cfg\ctexopts.cfg)
+(C:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-loadclass.def
+(C:\CTEX\MiKTeX\tex\latex\base\book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(C:\CTEX\MiKTeX\tex\latex\base\bk12.clo)))
+(C:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-common.def
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\expl3.sty
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3names.sty
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3bootstrap.sty))
+(C:\CTEX\MiKTeX\tex\latex\misc\etex.sty)
+(C:\CTEX\MiKTeX\tex\latex\graphics\color.sty
+(C:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg)
+(C:\CTEX\MiKTeX\tex\xelatex\xetex-def\xetex.def))
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+(C:\CTEX\MiKTeX\tex\latex\graphics\trig.sty)
+(C:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg))
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3basics.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3expan.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3tl.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3seq.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3int.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3quark.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3prg.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3clist.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3token.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3prop.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3msg.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3file.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3skip.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3keys.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3fp.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3box.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3coffins.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3color.sty)
+(C:\CTEX\MiKTeX\tex\latex\l3kernel\l3luatex.sty))
+(C:\CTEX\MiKTeX\tex\latex\etoolbox\etoolbox.sty)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty)
+(C:\CTEX\MiKTeX\tex\generic\ifxetex\ifxetex.sty)
+(C:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty)
+(C:\CTEX\MiKTeX\tex\latex\tools\indentfirst.sty)
+(C:\CTEX\MiKTeX\tex\latex\base\fix-cm.sty
+(C:\CTEX\MiKTeX\tex\latex\base\ts1enc.def))
+(C:\CTEX\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty)
+(C:\CTEX\MiKTeX\tex\latex\ctex\engine\ctex-xecjk-engine.def
+(C:\CTEX\MiKTeX\tex\latex\savesym\savesym.sty
+
+LaTeX Warning: You have requested package `savesym',
+               but the package provides `savesymbol'.
+
+) (C:\CTEX\MiKTeX\tex\xelatex\xecjk\xeCJK.sty
+(C:\CTEX\MiKTeX\tex\latex\xkeyval\xkeyval.sty
+(C:\CTEX\MiKTeX\tex\generic\xkeyval\xkeyval.tex))
+(C:\CTEX\MiKTeX\tex\latex\fontspec\fontspec.sty
+(C:\CTEX\MiKTeX\tex\latex\l3packages\xparse\xparse.sty)
+(C:\CTEX\MiKTeX\tex\latex\fontspec\fontspec-patches.sty
+(C:\CTEX\MiKTeX\tex\latex\base\fixltx2e.sty)
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \oldstylenums with arg. spec. 'm' on line 107.
+*************************************************
+) (C:\CTEX\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
+(C:\CTEX\MiKTeX\tex\latex\base\fontenc.sty
+(C:\CTEX\MiKTeX\tex\latex\euenc\eu1enc.def)
+(C:\CTEX\MiKTeX\tex\latex\euenc\eu1lmr.fd))
+(C:\CTEX\MiKTeX\tex\xelatex\xunicode\xunicode.sty
+(C:\CTEX\MiKTeX\tex\latex\tipa\t3enc.def
+(C:\CTEX\MiKTeX\tex\latex\euenc\eu1lmss.fd))
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty))
+(C:\CTEX\MiKTeX\tex\latex\fontspec\fontspec.cfg))))
+(C:\CTEX\MiKTeX\tex\latex\ctex\engine\ctex-cjk-common.def
+(C:\CTEX\CTeX\tex\latex\CJK\CJKfntef.sty
+(C:\CTEX\MiKTeX\tex\latex\cjk\CJKulem.sty
+(C:\CTEX\MiKTeX\tex\latex\ulem\ulem.sty))))
+(C:\CTEX\MiKTeX\tex\latex\ctex\fontset\ctex-xecjk-adobefonts.def)))
+(C:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-caption.def)
+(C:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-class.def)
+(C:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-book.def))
+(C:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-utf8.def)
+(C:\CTEX\MiKTeX\tex\latex\ctex\cfg\ctexcap.cfg
+(C:\CTEX\MiKTeX\tex\latex\ctex\cfg\ctexcap-utf8.cfg))
+(C:\CTEX\MiKTeX\tex\latex\ctex\cfg\ctex.cfg)
+(C:\CTEX\UserData\tex\latex\metalogo\metalogo.sty)
+(C:\CTEX\MiKTeX\tex\latex\base\ifthen.sty)
+(C:\CTEX\UserData\tex\latex\threeparttable\threeparttable.sty)
+(C:\CTEX\MiKTeX\tex\latex\tools\dcolumn.sty
+(C:\CTEX\MiKTeX\tex\latex\tools\array.sty))
+(C:\CTEX\MiKTeX\tex\latex\multirow\multirow.sty)
+(C:\CTEX\UserData\tex\latex\booktabs\booktabs.sty)
+(C:\CTEX\UserData\tex\latex\mh\mathtools.sty
+(C:\CTEX\MiKTeX\tex\latex\tools\calc.sty)
+(C:\CTEX\UserData\tex\latex\mh\mhsetup.sty)
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty))
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty)
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty)))
+(C:\CTEX\MiKTeX\tex\latex\ams\classes\amsthm.sty)
+(C:\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty)
+(C:\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty)
+(C:\CTEX\MiKTeX\tex\latex\tools\bm.sty)
+(C:\CTEX\UserData\tex\latex\was\upgreek.sty)
+(C:\CTEX\UserData\tex\latex\subfigure\subfigure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(C:\CTEX\UserData\tex\latex\subfigure\subfigure.cfg))
+(C:\CTEX\UserData\tex\latex\ccaption\ccaption.sty)
+(C:\CTEX\UserData\tex\latex\natbib\natbib.sty)
+(C:\CTEX\UserData\tex\latex\xcolor\xcolor.sty
+(C:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg))
+(C:\CTEX\UserData\tex\latex\marvosym\marvosym.sty)
+(C:\CTEX\UserData\tex\latex\listings\listings.sty
+(C:\CTEX\UserData\tex\latex\listings\lstmisc.sty)
+(C:\CTEX\UserData\tex\latex\listings\listings.cfg))
+(C:\CTEX\MiKTeX\tex\latex\hyperref\hyperref.sty
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty))
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty)
+(C:\CTEX\MiKTeX\tex\latex\hyperref\pd1enc.def)
+(C:\CTEX\MiKTeX\tex\latex\00miktex\hyperref.cfg)
+(C:\CTEX\MiKTeX\tex\xelatex\xetexurl\url.sty))
+
+Package hyperref Message: Driver: hxetex.
+
+(C:\CTEX\MiKTeX\tex\latex\hyperref\hxetex.def
+(C:\CTEX\MiKTeX\tex\latex\hyperref\puenc.def)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\stringenc.sty)
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty))
+(C:\CTEX\UserData\tex\latex\enumitem\enumitem.sty))
+(C:\Users\dell\Desktop\location\daily_report\linhao\sjtuthesis.cfg)
+(C:\Users\dell\Desktop\location\daily_report\linhao\diss.aux)
+(C:\CTEX\MiKTeX\tex\latex\tipa\t3cmr.fd)
+(C:\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty))
+(C:\Users\dell\Desktop\location\daily_report\linhao\diss.out)
+(C:\Users\dell\Desktop\location\daily_report\linhao\diss.out)
+(C:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd)
+(C:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\se-ascii-print.def) [1] [2] [3] [4]
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+
+[7
