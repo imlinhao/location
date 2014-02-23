@@ -1,0 +1,71 @@
+\chapter{2014年2月23日}
+\section{wifi定位系统—Android端实现}
+\subsection{将航位推算集成到百度地图}
+\begin{enumerate}
+    \item
+    进行实验测试
+    \begin{enumerate}
+    \item
+    记录两点之间的经纬度
+    \item
+    记录步数
+    \item
+    用航位推算软件记录位置信息
+    \end{enumerate}
+    \item
+    得出测试结果（经纬度和DeadReckoning软件记录的位置的函数关系）
+    \item
+    代码合成
+\iffalse
+    \item
+    进行定位算法的几要点：
+    \begin{enumerate}
+    \item
+    第一：收集多组SS样本，并且从一个基站使用一个样本均值。
+    \item
+    第二：为了确定位置和方向，确定用哪一组数据
+    \begin{enumerate}
+    \item
+    一：加入离线状态下的数据进行考虑
+    \item
+    二：信号传播建模（develop a model that accounts for both free-space loss and loss）
+    \end{enumerate}
+    \item
+     第三：need a metric and a search methodology to compare multiple locations and pick the one that best matches the observed signal strength
+    \end{enumerate}
+    \item
+    对于以下三种方法：The empirical method performs significantly better than both of the other methods
+    \begin{enumerate}
+    \item
+    First:empirical method
+    \item
+    Second:strongest base station
+    \item
+    Third:random method
+    \end{enumerate}
+    \item
+    Unlike the basic analysis where we only considered the single nearest neighbor in signal space,we now consider k nearest neighbors, for various values of k.averaging the coordinates of the neighbors may yield an estimate that is closer to the user’s true location
+\fi
+\end{enumerate}
+\subsection{代码阅读整理}
+E:/JNHomework/wifilocation/location/codes/zhangyi/vt-ece-3574-dead-reckoning-read-only
+\begin{enumerate}
+\item
+所需包或类
+\begin{enumerate}
+\item
+edu.vt.dr.GLAndSensorsActivity
+\item
+edu.vt.dr.utilities
+\end{enumerate}
+\item
+如何获取位置信息
+\begin{enumerate}
+\item
+首先GLAndSensorsActivity.java中onSensorChanged方法调用了包utilities下SensorUtil类中的routeEvent方法，通过map类型的mHandlers匹配到其中在AccelerationHandler中实现了EventHandler中的service接口，然后就知道其中调用了LocationUtil类中的accelerationUpdate方法，其中就包含了位置更新算法。
+\item
+然后我们的目标就很简单了：就是将一个Activity个一个包提取出来。
+将Activity中实现SensorEventListener接口，然后类似的初始化和传感器监听。当我们从包中获取到位置信息后就直接更新百度地图的显示（重新定位）
+\end{enumerate}
+\end{enumerate}
+
